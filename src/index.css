@@ -28,7 +28,11 @@
 
 @layer utilities {
   .nav::after {
-    @apply content-[""] bg-black h-[3px] w-[0%] left-0 top-5 absolute rounded-xl duration-500
+    @apply content-[""] bg-background h-[3px] w-[0%] left-0 top-[1.4rem] absolute rounded-xl duration-500
+  }
+
+  .navStatic::after {
+    @apply content-[""] bg-background h-[3px] w-[100%] left-0 top-[1.4rem] absolute rounded-xl
   }
 
   .nav:hover::after {

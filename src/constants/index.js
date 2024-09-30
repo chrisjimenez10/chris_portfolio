@@ -1,3 +1,11 @@
+import {
+    githubUri,
+    gitlabUri,
+    instagramUri,
+    linkedinUri,
+
+} from "../assets/index.js";
+
 const navTitles = [
     {
         id: 1,
@@ -23,7 +31,31 @@ const navTitles = [
     },
 ];
 
+const navIcons = [
+    {
+        id: 1,
+        title: "GitHub",
+        image: githubUri,
+    },
+    {
+        id: 2,
+        title: "LinkedIn",
+        image: linkedinUri,
+    },
+    {
+        id: 3,
+        title: "Instagram",
+        image: instagramUri,
+    },
+    {
+        id: 4,
+        title: "GitLab",
+        image: gitlabUri,
+    },
+];
+
 export {
     navTitles,
-
-}
+    navIcons,
+    
+};

@@ -1,8 +1,8 @@
 import {
-    githubUri,
-    gitlabUri,
-    instagramUri,
-    linkedinUri,
+    github,
+    gitlab,
+    instagram,
+    linkedin,
 
 } from "../assets/index.js";
 
@@ -35,22 +35,26 @@ const navIcons = [
     {
         id: 1,
         title: "GitHub",
-        image: githubUri,
+        image: github,
+        url: "https://github.com/chrisjimenez10",
     },
     {
         id: 2,
         title: "LinkedIn",
-        image: linkedinUri,
+        image: linkedin,
+        url: "https://www.linkedin.com/in/christopherjimenez10/",
     },
     {
         id: 3,
         title: "Instagram",
-        image: instagramUri,
+        image: instagram,
+        url: "https://www.instagram.com/chris10_jq/",
     },
     {
         id: 4,
         title: "GitLab",
-        image: gitlabUri,
+        image: gitlab,
+        url: "https://gitlab.com/chrisjimenez10",
     },
 ];
 

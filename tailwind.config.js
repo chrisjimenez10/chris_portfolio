@@ -12,7 +12,7 @@ export default {
         onBackground: "rgba(var(--onBackground))",
         onSurface: "rgba(var(--onSurface))",
         primary: "rgba(var(--primary))",
-      }
+      },
     },
   },
   plugins: [],

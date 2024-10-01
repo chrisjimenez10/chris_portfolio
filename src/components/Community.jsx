@@ -1,8 +1,11 @@
-import React from 'react'
+import PageTransition from "./ui/PageTransition";
+
 
 const Community = () => {
   return (
-    <div>Community</div>
+    
+      <div>Community</div>
+    
   )
 }
 

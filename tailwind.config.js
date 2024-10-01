@@ -13,6 +13,11 @@ export default {
         onSurface: "rgba(var(--onSurface))",
         primary: "rgba(var(--primary))",
       },
+      zIndex: {
+        first: "80",
+        second: "70",
+        third: "60",
+      }
     },
   },
   plugins: [],

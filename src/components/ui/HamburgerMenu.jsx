@@ -32,7 +32,7 @@ const HamburgerMenu = ({navTitles, navIcons, classNames}) => {
 
 
       <div className={`fixed w-full bottom-0 h-[10%] flex items-center justify-center bg-surface/45 backdrop-blur-sm z-50`}>
-        <nav className="flex gap-10">
+        <nav className="flex gap-4 sm:gap-10">
           {navTitles.map(({icon, id, url, title})=>(
             <Link key={id} to={url} className="relative group">
 

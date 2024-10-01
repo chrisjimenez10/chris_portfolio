@@ -1,12 +1,12 @@
 import PageTransition from "./ui/PageTransition";
 
 
-const About = () => {
+const Contact = () => {
   return (
     
-      <div>About</div>
+      <div>Contact</div>
     
   )
 }
 
-export default About;
+export default Contact;

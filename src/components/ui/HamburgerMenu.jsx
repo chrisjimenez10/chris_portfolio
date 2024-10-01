@@ -53,10 +53,10 @@ const HamburgerMenu = ({navTitles, navIcons, classNames}) => {
               {/* Icon */}
               <div className={`rounded-xl ${pathname.pathname === url ? "bg-primary" : "bg-black/85"} p-3 transition-all duration-300 hover:bg-primary`}>
                 {icon}
-              </div>
+              </div>             
             </Link>
           ))}
-        </nav>
+        </nav>               
       </div>
 
     </div> 

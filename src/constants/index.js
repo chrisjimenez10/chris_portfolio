@@ -10,6 +10,8 @@ import {
 import React from "react";
 import { FaHome, FaUsers, FaUser } from "react-icons/fa";
 import { GoProjectRoadmap } from "react-icons/go";
+import { IoIosMail } from "react-icons/io";
+
 
 
 
@@ -22,27 +24,36 @@ const navTitles = [
         title: "Home",
         url: "/",
         icon: React.createElement(FaHome, {size: 30, color: "white"}),
+        desktop: true,
     },
     {
         id: 2,
         title: "About",
         url: "/about",
         icon: React.createElement(FaUser, {size: 30, color: "white"}),
-
+        desktop: true,
     },
     {
         id: 3,
         title: "Projects",
         url: "/projects",
         icon: React.createElement(GoProjectRoadmap, {size: 30, color: "white"}),
-
+        desktop: true,
     },
     {
         id: 4,
         title: "Community",
         url: "/community",
         icon: React.createElement(FaUsers, {size: 30, color: "white"}),
+        desktop: true,
     },
+    {
+        id: 5,
+        title: "Contact",
+        url: "/contact",
+        icon: React.createElement(IoIosMail, {size: 30, color: "white"}),
+        desktop: false,
+    }
 ];
 
 const navIcons = [

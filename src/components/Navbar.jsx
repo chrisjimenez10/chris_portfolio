@@ -11,17 +11,22 @@ const Navbar = () => {
     //Location
     const pathname = useLocation(null);
 
+    //Filtered Nav Items
+    const filteredTitles = navTitles.filter(title => title.desktop === true);
+
   return (
     <>
       <div className="hidden fixed top-0 z-50 backdrop-blur-sm w-full md:flex justify-around items-center space-x-20 h-[10vh] bg-surface/35">
         <nav className="flex justify-around items-center space-x-16">
-          {navTitles.map(({title, url, id})=>(
+          {filteredTitles.map(({id, url, title})=>{
+           return(
             <div key={id}>
               <Link to={url} className={`relative ${pathname.pathname === url ? "navStatic": ""}`}>
                 <span className="relative text-onSurface nav">{title}</span>
               </Link>
             </div>
-          ))}
+           )
+          })}
         </nav>
 
         <nav className="flex justify-around items-center space-x-10">

@@ -13,6 +13,8 @@ import { GoProjectRoadmap } from "react-icons/go";
 
 
 
+export const developerName = "Christopher Jimenez";
+
 const navTitles = [
     //NOTE: If we want to attach a component and render it in our custom component in a JSX file, we MUST use the "React.createElement()" syntax with the props passed as an object with properties representing the individual props --> Example in this array (JSX syntax is not valid in a JS file)
     {

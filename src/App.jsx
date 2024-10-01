@@ -9,7 +9,7 @@ import Community from "./components/Community";
 
 const App = () => {
   return (
-    <main className="dark h-screen bg-background">
+    <main className="light h-screen bg-background">
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />

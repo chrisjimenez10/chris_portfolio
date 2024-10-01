@@ -26,7 +26,7 @@ const Navbar = () => {
 
         <nav className="flex justify-around items-center space-x-10">
           {navIcons.map(({id, image, title, url})=>(
-            <div key={id} className="cursor-pointer transition-transform duration-200 hover:-translate-y-1 bg-white rounded-full p-1">
+            <div key={id} className="cursor-pointer transition-transform duration-200 hover:-translate-y-1 bg-white rounded-full p-1 border-[2px] border-background">
               <a href={url} target={"_blank"}>
                 <img src={image} alt={title} width={24} height={24} />
               </a>

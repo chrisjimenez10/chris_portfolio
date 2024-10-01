@@ -24,6 +24,7 @@ const PageTransition = ({children}) => {
     <>
     {/* Here, we want the animation of three different colored divs going from full screen on the right side to hiding away moving towards the left side --> NOTE: It's important that for this effect we assign z-index values to each div as to not cover each other when they complete the animation at staggered time intervals (which we set in the "transition" prop) */}
       <motion.div
+      // NOTE: We MUST provide unique key value prop to the "motion.div" to help React distinguish and ALLOW the page transition effect with routing --> We wrap all of the Routes with this component and accept "children" here and render at the bottom div
       key={location.pathname + "div1"}
       className="fixed top-0 bottom-0 right-full h-screen w-screen z-first bg-primary"
       variants={transitionVariants} initial="initial" animate="animate" exit="exit"
@@ -42,6 +43,7 @@ const PageTransition = ({children}) => {
       transition={{delay: 0.6, duration: 0.7, ease: "easeInOut"}}
       />
 
+      {/* Pushing div containing the component that is rendered so it appears BELOW the Header/Navbar */}
       <div className="translate-y-[7rem]">
         {children}
       </div>

@@ -1,11 +1,11 @@
-import PageTransition from "./ui/PageTransition";
+
 
 const Home = () => {
   return (
     
-      <div className="text-center mt-10">
-        <h1>Home</h1>
-      </div>
+    <div className="flex items-center justify-center">
+      <h1 className="text-onBackground text-2xl">Home</h1>
+    </div>
     
   )
 }

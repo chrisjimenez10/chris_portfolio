@@ -41,15 +41,15 @@ const ToggleThemeButton = () => {
 
 
   return (
-    <div className={`${icon === "sun" ? "bg-black" : "bg-white"} rounded-full w-10 h-10 cursor-pointer`} onClick={handleIconToggle}>       
+    <div className={`${icon === "sun" ? "bg-black" : "bg-white"} rounded-full w-8 h-8 cursor-pointer`} onClick={handleIconToggle}>       
           <motion.div
             variants={transitionVariants}
             initial="initial"
             animate={icon === "sun" ? "initial" : "animate"}
             transition={{duration: 0.5, ease: "easeInOut"}}
-            className="relative top-[.34rem] left-[.38rem]"
+            className="relative top-[.25rem] left-[.25rem]"
           >
-            <IoIosSunny size={28} color="black" className="animate-spin" style={{animationDuration: "15s"}}/>
+            <IoIosSunny size={24} color="black" className="animate-spin" style={{animationDuration: "15s"}}/>
           </motion.div> 
         
           <motion.div
@@ -57,9 +57,9 @@ const ToggleThemeButton = () => {
           initial="initial"
           animate={icon === "sun" ? "animate" : "initial"}
           transition={{duration: 0.5, ease: "easeInOut"}}
-          className="relative bottom-5 left-[.45rem]"
+          className="relative bottom-[1rem] left-[.35rem]"
           >
-            <BsMoonStarsFill size={24} color="white" className="animate-pulse" style={{animationDuration: "5s"}}/>
+            <BsMoonStarsFill size={19} color="white" className="animate-pulse" style={{animationDuration: "5s"}}/>
           </motion.div>
     </div>
 

@@ -4,6 +4,8 @@ import { useLocation } from "react-router-dom";
 import { navTitles, navIcons } from "../constants";
 //Components
 import HamburgerMenu from "./ui/HamburgerMenu";
+//UI
+import ToggleThemeButton from "./ui/ToggleThemeButton";
 
 
 const Navbar = () => {
@@ -17,7 +19,7 @@ const Navbar = () => {
   return (
     <>
       <div className="hidden fixed top-0 z-50 backdrop-blur-sm w-full md:flex justify-around items-center space-x-20 h-[10vh] bg-surface/35">
-        <nav className="flex justify-around items-center space-x-16">
+        <nav className="flex justify-around items-center md:space-x-10 lg:space-x-16">
           {filteredTitles.map(({id, url, title})=>{
            return(
             <div key={id}>
@@ -29,7 +31,7 @@ const Navbar = () => {
           })}
         </nav>
 
-        <nav className="flex justify-around items-center space-x-10">
+        <nav className="flex justify-around items-center space-x-6">
           {navIcons.map(({id, image, title, url})=>(
             <div key={id} className="cursor-pointer transition-transform duration-200 hover:-translate-y-1 bg-white rounded-full p-1 border-[2px] border-background">
               <a href={url} target={"_blank"}>
@@ -37,6 +39,7 @@ const Navbar = () => {
               </a>
             </div>
           ))}
+          <ToggleThemeButton />
         </nav>
       </div>
 

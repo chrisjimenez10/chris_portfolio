@@ -6,13 +6,15 @@ import { motion } from "framer-motion";
 
 const ToggleThemeButton = () => {
 
+  //Local Storage
+  const initializeTheme = () => {
+    const storedTheme = localStorage.getItem("theme");
+    return storedTheme || "dark";
+  }
+
   //State
   const [icon, setIcon] = useState("sun");
-
-  //Functions
-  const handleIconToggle = () => {
-    setIcon(icon === "sun" ? "moon" : "sun");
-  };
+  const [theme, setTheme] = useState(initializeTheme);
 
   //Animation
   const transitionVariants = {
@@ -22,14 +24,28 @@ const ToggleThemeButton = () => {
     animate: {
       opacity: 1
     }
-  }
+  };
+
+  //useEffect() Hook to keep track and udpate class
+  useEffect(()=>{
+    document.documentElement.classList.toggle("dark", theme === "dark");
+    document.documentElement.classList.toggle("light", theme === "light");
+    localStorage.setItem("theme", theme);
+  },[theme]);
+
+    //Functions
+    const handleIconToggle = () => {
+      setIcon(icon === "sun" ? "moon" : "sun");
+      setTheme(theme === "dark" ? "light" : "dark");
+    };
+
 
   return (
-    <div className={`${icon === "sun" ? "bg-white" : "bg-black"} rounded-full w-10 h-10 cursor-pointer`} onClick={handleIconToggle}>       
+    <div className={`${icon === "sun" ? "bg-black" : "bg-white"} rounded-full w-10 h-10 cursor-pointer`} onClick={handleIconToggle}>       
           <motion.div
             variants={transitionVariants}
             initial="initial"
-            animate={icon === "sun" ? "animate" : "initial"}
+            animate={icon === "sun" ? "initial" : "animate"}
             transition={{duration: 0.5, ease: "easeInOut"}}
             className="relative top-[.34rem] left-[.38rem]"
           >
@@ -39,7 +55,7 @@ const ToggleThemeButton = () => {
           <motion.div
           variants={transitionVariants}
           initial="initial"
-          animate={icon === "sun" ? "initial" : "animate"}
+          animate={icon === "sun" ? "animate" : "initial"}
           transition={{duration: 0.5, ease: "easeInOut"}}
           className="relative bottom-5 left-[.45rem]"
           >

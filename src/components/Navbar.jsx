@@ -18,7 +18,7 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="hidden fixed top-0 z-50 backdrop-blur-sm w-full md:flex justify-around items-center space-x-20 h-[10vh] bg-surface/35">
+      <div className="hidden fixed top-0 z-50 backdrop-blur-sm w-full md:flex justify-around items-center space-x-20 h-[10vh] bg-surface/45">
         <nav className="flex justify-around items-center md:space-x-10 lg:space-x-16">
           {filteredTitles.map(({id, url, title})=>{
            return(
@@ -44,7 +44,7 @@ const Navbar = () => {
       </div>
 
       {/* Mobile Device - Hamburger Menu */}
-      <HamburgerMenu navTitles={navTitles} navIcons={navIcons} classNames={`md:hidden`}/>
+      <HamburgerMenu navTitles={navTitles} navIcons={navIcons} classNames={`md:hidden`} themeButton={<ToggleThemeButton />}/>
     </>
   )
 }

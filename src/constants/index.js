@@ -84,6 +84,9 @@ const navIcons = [
 
 ];
 
+export const homeHeading = "Transforming Ideas into Reality, One Line of Code at a Time.";
+export const homeDescription = "With a passion for delivering high-quality solutions, I leverage my full-stack expertise to bring projects to life. From backend design to intuitive user interfaces, I ensure seamless integration and exceptional user experiences.";
+
 export {
     navTitles,
     navIcons,

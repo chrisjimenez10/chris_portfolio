@@ -4,7 +4,7 @@ import { useLocation } from "react-router-dom";
 import { developerName } from "../../constants";
 
 
-const HamburgerMenu = ({navTitles, navIcons, classNames}) => {
+const HamburgerMenu = ({navTitles, navIcons, classNames, themeButton}) => {
 
   //Location
   const pathname = useLocation(null);
@@ -14,10 +14,11 @@ const HamburgerMenu = ({navTitles, navIcons, classNames}) => {
     <div className={`${classNames || ""} `}>
 
       <div className="flex flex-col items-center justify-center space-y-4 w-full relative top-5">
-        <h1 className="text-onBackground text-xl sm:text-2xl">
+        <h1 className="text-onBackground text-xl sm:text-2xl flex">
           <span className="font-bold">{developerName.substring(0, 11)}</span>
           <span className="font-extralight"> {developerName.substring(12,20)}</span>
           <span className="text-primary">{"."}</span>
+          <span className="translate-x-3">{themeButton}</span>
         </h1>
         <nav className="flex items-center justify-center gap-5">
           {navIcons.map(({id, image, title, url})=>(

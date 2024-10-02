@@ -1,4 +1,3 @@
-import PageTransition from "./ui/PageTransition";
 
 
 const Community = () => {

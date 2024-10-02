@@ -15,7 +15,7 @@ const PageTransition = ({children}) => {
     },
     exit: {
       // The "exit" key assigns the animation state of the component when it UNMOUNTS
-      x: ["0%", "100%"],
+      x: "0%",
     },
   }
 
@@ -28,19 +28,19 @@ const PageTransition = ({children}) => {
       key={location.pathname + "div1"}
       className="fixed top-0 bottom-0 right-full h-screen w-screen z-first bg-primary"
       variants={transitionVariants} initial="initial" animate="animate" exit="exit"
-      transition={{delay: 0.2, duration: 0.7, ease: "easeInOut"}}
+      transition={{delay: 0, duration: 0.8, ease: "easeInOut"}}
       />
       <motion.div
       key={location.pathname + "div2"}
       className="fixed top-0 bottom-0 right-full h-screen w-screen z-second bg-[#39ace7]"
       variants={transitionVariants} initial="initial" animate="animate" exit="exit"
-      transition={{delay: 0.4, duration: 0.7, ease: "easeInOut"}}
+      transition={{delay: 0.2, duration: 0.8, ease: "easeInOut"}}
       />
       <motion.div
       key={location.pathname + "div3"}
       className="fixed top-0 bottom-0 right-full h-screen w-screen z-third bg-[#0784b5]"
       variants={transitionVariants} initial="initial" animate="animate" exit="exit"
-      transition={{delay: 0.6, duration: 0.7, ease: "easeInOut"}}
+      transition={{delay: 0.4, duration: 0.8, ease: "easeInOut"}}
       />
 
       {/* Pushing div containing the component that is rendered so it appears BELOW the Header/Navbar */}

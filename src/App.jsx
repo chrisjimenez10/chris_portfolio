@@ -1,7 +1,7 @@
 //Imports
 import {Routes, Route} from "react-router-dom";
 import { Suspense, lazy } from "react";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence } from "framer-motion";
 //Components
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
@@ -19,8 +19,8 @@ const App = () => {
 
   return (
     <Suspense fallback={<Loader />}>
-    <AnimatePresence mode="wait">
-      <motion.main className="light h-screen bg-background">
+    <AnimatePresence>
+      <main className="dark h-screen bg-background">
         <Navbar />
         <PageTransition>
         <Routes>
@@ -33,7 +33,7 @@ const App = () => {
           <Route path="*" element={<Error />} />
         </Routes>
         </PageTransition>
-      </motion.main>
+      </main>
     </AnimatePresence>
     </Suspense>
   )

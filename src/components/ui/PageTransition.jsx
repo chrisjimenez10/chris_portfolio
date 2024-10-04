@@ -8,7 +8,7 @@ const PageTransition = ({children}) => {
   //Variants --> NOTE: We can customize the variants we want to use in our "motion.div" and then reference them by assigning the property key form our custom variant object as the VALUE to the prop of the "motion.div" (IMPORTANT: We MUST tell the "motion.div" that we are using a custom variant object with the "variants" prop and assigning our object as the value)
   const transitionVariants = {
     initial: {
-      x: "100%",
+      x: ["100%"],
     },
     animate: {
       x: "0%",

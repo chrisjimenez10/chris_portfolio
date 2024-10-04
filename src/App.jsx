@@ -19,7 +19,7 @@ const App = () => {
 
   return (
     <Suspense fallback={<Loader />}>
-    <AnimatePresence>
+    <AnimatePresence mode="wait">
       <main className="h-screen bg-background">
         <Navbar />
         <PageTransition>

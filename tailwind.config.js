@@ -1,3 +1,4 @@
+
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
@@ -12,6 +13,11 @@ export default {
         onBackground: "rgba(var(--onBackground))",
         onSurface: "rgba(var(--onSurface))",
         primary: "rgba(var(--primary))",
+      },
+      zIndex: {
+        first: "80",
+        second: "70",
+        third: "60",
       }
     },
   },

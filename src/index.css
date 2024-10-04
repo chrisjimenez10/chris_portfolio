@@ -1,8 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Varela+Round&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+
 @layer base {
+  :root {
+    font-family: "Exo 2", sans-serif;
+    scroll-behavior: smooth;
+  }
+
   .dark {
     /* Dark Background and the Overlay Color (--surface) */
     --background: 15, 15, 15;
@@ -28,11 +36,11 @@
 
 @layer utilities {
   .nav::after {
-    @apply content-[""] bg-background h-[3px] w-[0%] left-0 top-[1.4rem] absolute rounded-xl duration-500
+    @apply content-[""] bg-onBackground h-[3px] w-[0%] left-0 top-[1.4rem] absolute rounded-xl duration-500
   }
 
   .navStatic::after {
-    @apply content-[""] bg-background h-[3px] w-[100%] left-0 top-[1.4rem] absolute rounded-xl
+    @apply content-[""] bg-onBackground h-[3px] w-[100%] left-0 top-[1.4rem] absolute rounded-xl
   }
 
   .nav:hover::after {

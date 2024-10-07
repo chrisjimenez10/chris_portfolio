@@ -1,6 +1,7 @@
 //Imports
 import { chrisPortrait } from "../assets";
 import { homeHeading, homeDescription } from "../constants";
+import { RiFileDownloadLine } from "react-icons/ri";
 
 const Home = () => {
   return (
@@ -26,7 +27,12 @@ const Home = () => {
             {homeDescription}
           </h2>
         </div>
-        <button className="bg-onBackground text-background rounded-md p-2 text-sm md:text-xl transition-colors hover:bg-background hover:text-onBackground border border-onBackground">Resume</button>
+        
+        <div className="flex items-center justify-center gap-2 bg-onBackground rounded-md p-2 transition-colors hover:bg-background border border-onBackground group cursor-pointer">
+          <h1 className="text-sm md:text-xl font-semibold text-background group-hover:text-onBackground">Resume</h1>
+          <RiFileDownloadLine size={24} className="text-background group-hover:text-onBackground"/>
+        </div>
+        
       </div>
 
     </div>

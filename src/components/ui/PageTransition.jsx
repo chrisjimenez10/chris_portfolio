@@ -8,14 +8,14 @@ const PageTransition = ({children}) => {
   //Variants --> NOTE: We can customize the variants we want to use in our "motion.div" and then reference them by assigning the property key form our custom variant object as the VALUE to the prop of the "motion.div" (IMPORTANT: We MUST tell the "motion.div" that we are using a custom variant object with the "variants" prop and assigning our object as the value)
   const transitionVariants = {
     initial: {
-      x: ["100%"],
+      x: "100%",
     },
     animate: {
       x: "0%",
     },
     exit: {
       // The "exit" key assigns the animation state of the component when it UNMOUNTS
-      x: "0%",
+      x: ["0%", "100%"],
     },
   }
 
@@ -44,7 +44,7 @@ const PageTransition = ({children}) => {
       />
 
       {/* Pushing div containing the component that is rendered so it appears BELOW the Header/Navbar */}
-      <div className="translate-y-[2rem] md:translate-y-[5.8rem] bg-background">
+      <div className="translate-y-[2rem] md:translate-y-[5.8rem] bg-background h-screen">
         {children}
       </div>
       

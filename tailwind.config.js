@@ -18,6 +18,9 @@ export default {
         first: "80",
         second: "70",
         third: "60",
+      },
+      boxShadow: {
+        shadow: "7px 7px rgba(var(--onBackground))",
       }
     },
   },

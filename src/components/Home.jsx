@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 import { developerName } from "../constants";
 //UI
 import WordEffect from "./ui/WordEffect";
+import ParticlesContainer from "./ui/ParticlesContainer";
 
 
 const Home = () => {
@@ -15,8 +16,9 @@ const Home = () => {
   return (
 
     <div className="flex flex-col space-y-10 translate-y-[1rem] lg:flex-row items-center justify-around md:translate-y-10 lg:translate-y-[9rem]">
-
-      <div className="w-[300px] md:w-[350px] lg:w-1/3 2xl:-translate-y-10">
+      <ParticlesContainer classNames="z-0"/>
+      
+      <div className="w-[300px] md:w-[350px] lg:w-1/3 2xl:-translate-y-10 z-10">
         <div className="bg-onBackground p-[2px] rounded-2xl shadow-shadow">
           <div className="bg-surface p-7 rounded-2xl">
             <img src={chrisPortrait} alt="Chris Portrait" className="bg-black/75 rounded-2xl" />

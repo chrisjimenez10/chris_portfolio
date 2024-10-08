@@ -21,6 +21,7 @@ const WordEffect = ({phrase, classNames, headingType}) => {
             <motion.h1 className={`${classNames || ""}`}
             initial="initial"
             whileInView="animate"
+            //Here, we are using the "delayChildren" porperty because our page transition takes some time to conclude and the component is mounted already, so the animation will be triggered at the same time as the page transition
             transition={{delayChildren: 0.8, staggerChildren: .02}}
             >
               {phraseArr.map((char, index)=>(

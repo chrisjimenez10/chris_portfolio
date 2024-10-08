@@ -1,5 +1,7 @@
+//Imports
 import { motion } from "framer-motion";
 import { useLocation } from "react-router-dom";
+
 
 const PageTransition = ({children}) => {
 
@@ -45,7 +47,7 @@ const PageTransition = ({children}) => {
 
       {/* Pushing div containing the component that is rendered so it appears BELOW the Header/Navbar */}
       <div className="translate-y-[2rem] md:translate-y-[5.8rem] bg-background h-screen">
-        {children} 
+        {children}
       </div>
       
     </>

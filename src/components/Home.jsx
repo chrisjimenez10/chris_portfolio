@@ -17,7 +17,7 @@ const Home = () => {
 
     <div className="flex flex-col space-y-10 translate-y-[1rem] lg:flex-row items-center justify-around md:translate-y-10 lg:translate-y-[9rem]">
       <ParticlesContainer classNames="z-0"/>
-      
+
       <div className="w-[300px] md:w-[350px] lg:w-1/3 2xl:-translate-y-10 z-10">
         <div className="bg-onBackground p-[2px] rounded-2xl shadow-shadow">
           <div className="bg-surface p-7 rounded-2xl">

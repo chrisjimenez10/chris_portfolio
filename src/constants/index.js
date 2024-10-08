@@ -87,6 +87,9 @@ const navIcons = [
 export const homeHeading = "Transforming Ideas into Reality, One Line of Code at a Time.";
 export const homeDescription = "With a passion for delivering high-quality solutions, I leverage my full-stack expertise to bring projects to life. From backend design to intuitive user interfaces, I ensure seamless integration and exceptional user experiences.";
 
+export const aboutHeading = "Solving real-world problems, one commit at a time.";
+export const aboutDescription = "I'm Christopher Jimenez, a curious and creative full-stack software engineer fueled by a desire to make a meaningful impact. With a passion for driving innovative solutions and a relentless pursuit of excellence, I'm committed to solving real-world problems through thoughtful design, meticulous coding, and collaborative teamwork. Whether it's streamlining processes, enhancing user experiences, or driving business growth, I'm passionate about harnessing technology to create positive change.";
+
 export {
     navTitles,
     navIcons,

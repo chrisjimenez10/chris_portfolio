@@ -28,6 +28,7 @@ const WordEffect = ({phrase, classNames, headingType}) => {
                 key={index}
                 transition={{duration: 0.6}}
                 variants={charVariants}
+                className={`${index < 31 ? "text-primary" : ""}`}
                 >
                     {char}
                 </motion.span>

@@ -15,6 +15,7 @@ export default {
         primary: "rgba(var(--primary))",
       },
       zIndex: {
+        king: "90",
         first: "80",
         second: "70",
         third: "60",

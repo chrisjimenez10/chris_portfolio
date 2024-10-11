@@ -11,6 +11,8 @@ export default {
         primary: "rgba(var(--primary))",
         textColor: "rgba(var(--textColor))",
         surface: "rgba(var(--surface))",
+        background: "rgba(var(--background))",
+        contrastBg: "rgba(var(--contrastBg))",
       },
       zIndex: {
         king: "90",

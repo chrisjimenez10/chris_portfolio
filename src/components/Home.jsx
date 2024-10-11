@@ -33,7 +33,7 @@ const Home = () => {
 
       <div className="z-10 flex flex-col items-center justify-center px-[10px] space-y-2 md:space-y-5 lg:w-[800px]">
         <WordEffect phrase={homeHeading} classNames={`text-2xl xs:text-3xl sm:text-4xl sm:text-center lg:text-5xl xl:text-6xl lg:text-start font-bold text-textColor`} headingType="h1"/>       
-        <WordEffect phrase={homeDescription} classNames={`text-sm xs:text-base sm:text-xl sm:text-center lg:text-start lg:text-2xl xl:text-3xl text-textColor`} headingType="h2"/>
+        <WordEffect phrase={homeDescription} classNames={`text-sm xs:text-base sm:text-xl sm:text-center lg:text-start lg:text-2xl xl:text-3xl text-textColor font-semibold`} headingType="h2"/>
         
         <div className="flex space-x-5 translate-y-3">
           {/* We can use the browser's built-in functionality of downloading a PDF using anchor tag: 1.The href attribute is the path to the PDF document, 2.The download attribute is the name given to the file when downloaded by user and it also FORCES download rather than opening in browser --> NOTE: We have to place the PDF in the Public directory to use it this way */}

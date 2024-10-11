@@ -3,6 +3,16 @@ import {
     gitlab,
     instagram,
     linkedin,
+    gitIcon,
+    linuxIcon,
+    mongoDbIcon,
+    nodeJsIcon,
+    postgreSqlIcon,
+    pythonIcon,
+    awsIcon,
+    dockerIcon,
+    terraformIcon,
+
 
 } from "../assets/index.js";
 
@@ -11,9 +21,6 @@ import React from "react";
 import { FaHome, FaUsers, FaUser } from "react-icons/fa";
 import { GoProjectRoadmap } from "react-icons/go";
 import { IoIosMail } from "react-icons/io";
-
-
-
 
 export const developerName = "Christopher Jimenez";
 
@@ -90,8 +97,68 @@ export const homeDescription = "With a passion for delivering high-quality solut
 export const aboutHeading = "Solving real-world problems, one commit at a time.";
 export const aboutDescription = "I'm Christopher Jimenez, a curious and creative full-stack software engineer fueled by a desire to make a meaningful impact. With a passion for driving innovative solutions and a relentless pursuit of excellence, I'm committed to solving real-world problems through thoughtful design, meticulous coding, and collaborative teamwork. Whether it's streamlining processes, enhancing user experiences, or driving business growth, I'm passionate about harnessing technology to create positive change.";
 
+// Tech Stack
+const backendDevelopment = [
+    {
+        id: 1,
+        title: "Python",
+        image: pythonIcon,
+    },
+    {
+        id: 2,
+        title: "NodeJS",
+        image: nodeJsIcon,
+    },
+    {
+        id: 3,
+        title: "PostgreSQL",
+        image: postgreSqlIcon,
+    },
+    {
+        id: 4,
+        title: "MongoDB",
+        image: mongoDbIcon,
+    },
+    {
+        id: 5,
+        title: "Linux",
+        image: linuxIcon,
+    },
+    {
+        id: 5,
+        title: "Git",
+        image: gitIcon,
+    },
+
+];
+
+const devOps = [
+    {
+        id: 1,
+        title: "GitLab CI/CD",
+        image: gitlab,
+    },
+    {
+        id: 2,
+        title: "Docker",
+        image: dockerIcon,
+    },
+    {
+        id: 3,
+        title: "Terraform",
+        image: terraformIcon,
+    },
+    {
+        id: 4,
+        title: "AWS",
+        image: awsIcon,
+    },
+]
+
 export {
     navTitles,
     navIcons,
+    backendDevelopment,
+    devOps,
     
 };

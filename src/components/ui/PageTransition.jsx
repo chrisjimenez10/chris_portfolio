@@ -50,7 +50,7 @@ const PageTransition = ({children}) => {
       />
 
       {/* Pushing div containing the component that is rendered so it appears BELOW the Header/Navbar */}
-      <div className="">
+      <div>
         <Navbar />
         {children}
         <Footer className="fixed bottom-[90px] w-full md:bottom-3"/>

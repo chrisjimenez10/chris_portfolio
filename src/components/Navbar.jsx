@@ -24,7 +24,7 @@ const Navbar = () => {
            return(
             <div key={id}>
               <Link to={url} className={`relative ${pathname.pathname === url ? "navStatic": ""}`}>
-                <span className="relative text-onSurface nav">{title}</span>
+                <span className="relative text-textColor nav">{title}</span>
               </Link>
             </div>
            )

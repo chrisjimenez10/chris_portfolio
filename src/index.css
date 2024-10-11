@@ -9,38 +9,33 @@
   :root {
     font-family: "Exo 2", sans-serif;
     scroll-behavior: smooth;
+    --primary: 85, 136, 255;
   }
 
-  .dark {
-    /* Dark Background and the Overlay Color (--surface) */
-    --background: 15, 15, 15;
+  :root[data-theme="dark"] {
+    color-scheme: dark;
+    --textColor: 255, 255, 255;
     --surface: 45, 45, 45;
-  
-    --onBackground: 255, 255, 255;
-    --onSurface: 225, 225, 225;
-
-    --primary: 85, 136, 255;
+    --contrastBg: 245, 245, 245;
+    --background: 15, 15, 15;
   }
-
-  .light {
-    --background: 255, 255, 255;
+  :root[data-theme="light"]{
+    color-scheme: light;
+    --textColor: 15, 15, 15;
     --surface: 245, 245, 245;
-  
-    --onBackground: 15, 15, 15;
-    --onSurface: 45, 45, 45;
-
-    --primary: 85, 136, 255;
+    --contrastBg: 15, 15, 15;
+    --background: 255, 255, 255;
   }
 
 }
 
 @layer utilities {
   .nav::after {
-    @apply content-[""] bg-onBackground h-[3px] w-[0%] left-0 top-[1.4rem] absolute rounded-xl duration-500
+    @apply content-[""] bg-contrastBg h-[3px] w-[0%] left-0 top-[1.4rem] absolute rounded-xl duration-500
   }
 
   .navStatic::after {
-    @apply content-[""] bg-onBackground h-[3px] w-[100%] left-0 top-[1.4rem] absolute rounded-xl
+    @apply content-[""] bg-primary h-[3px] w-[100%] left-0 top-[1.4rem] absolute rounded-xl
   }
 
   .nav:hover::after {

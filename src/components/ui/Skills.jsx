@@ -7,7 +7,7 @@ const Skills = () => {
 
 
   return (
-    <div className="flex flex-col text-onBackground gap-5">
+    <div className="flex flex-col text-textColor gap-5">
         <h1 className="border-b border-primary text-center text-2xl">Skills</h1>
         <div className="flex gap-20 items-center justify-center text-lg">
             <h1 className="cursor-pointer hover:underline" onClick={()=> setSkills("front")}>Frontend</h1>

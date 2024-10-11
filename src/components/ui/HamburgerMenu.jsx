@@ -14,7 +14,7 @@ const HamburgerMenu = ({navTitles, navIcons, classNames, themeButton}) => {
     <div className={`${classNames || ""} `}>
 
       <div className="flex flex-col items-center justify-center space-y-4 w-full relative top-5">
-        <h1 className="text-onBackground text-xl sm:text-2xl flex">
+        <h1 className="text-textColor text-xl sm:text-2xl flex">
           <span className="font-bold">{developerName.substring(0, 11)}</span>
           <span className="font-extralight"> {developerName.substring(12,20)}</span>
           <span className="text-primary">{"."}</span>
@@ -32,14 +32,14 @@ const HamburgerMenu = ({navTitles, navIcons, classNames, themeButton}) => {
       </div>
 
 
-      <div className={`fixed w-full bottom-0 h-[80px] flex items-center justify-center bg-surface/45 backdrop-blur-sm z-50`}>
+      <div className={`fixed w-full left-0 bottom-0 h-[80px] flex items-center justify-center bg-surface/45 backdrop-blur-sm z-50`}>
         <nav className="flex gap-4 sm:gap-10">
           {navTitles.map(({icon, id, url, title})=>(
             <Link key={id} to={url} className="relative group">
 
               {/* Tooltip on Hover */}
               <div className="absolute -top-[2.8rem] hidden group-hover:flex">
-                <div className="bg-onSurface relative flex text-background items-center p-[5px] rounded-[5px]">
+                <div className="bg-surface relative flex text-background items-center p-[5px] rounded-[5px]">
                   <div>
                     <h1 className="text-[12px]">
                       {title}
@@ -47,7 +47,7 @@ const HamburgerMenu = ({navTitles, navIcons, classNames, themeButton}) => {
                   </div>
 
                   {/* Triangle */}
-                  <div className="border-solid border-t-onSurface border-t-8 border-x-transparent border-x-[6px] border-b-0 absolute top-7 left-1"></div>               
+                  <div className="border-solid border-t-surface border-t-8 border-x-transparent border-x-[6px] border-b-0 absolute top-7 left-1"></div>               
                 </div>
               </div>
 

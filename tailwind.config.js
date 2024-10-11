@@ -8,11 +8,11 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: "rgba(var(--background))",
-        surface: "rgba(var(--surface))",
-        onBackground: "rgba(var(--onBackground))",
-        onSurface: "rgba(var(--onSurface))",
         primary: "rgba(var(--primary))",
+        textColor: "rgba(var(--textColor))",
+        surface: "rgba(var(--surface))",
+        background: "rgba(var(--background))",
+        contrastBg: "rgba(var(--contrastBg))",
       },
       zIndex: {
         king: "90",

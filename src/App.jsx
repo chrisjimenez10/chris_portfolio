@@ -3,7 +3,6 @@ import {Routes, Route} from "react-router-dom";
 import { Suspense, lazy } from "react";
 import { AnimatePresence } from "framer-motion";
 //Components
-import Navbar from "./components/Navbar";
 import Home from "./components/Home";
 import Loader from "./components/ui/Loader";
 //Lazy Loading
@@ -20,8 +19,6 @@ const App = () => {
   return (
     <Suspense fallback={<Loader />}>
     <AnimatePresence mode="wait">
-      <main className="bg-background">
-        <Navbar />
         <PageTransition>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -33,7 +30,6 @@ const App = () => {
           <Route path="*" element={<Error />} />
         </Routes>
         </PageTransition>
-      </main>
     </AnimatePresence>
     </Suspense>
   )

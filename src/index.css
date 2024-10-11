@@ -10,8 +10,11 @@
     font-family: "Exo 2", sans-serif;
     scroll-behavior: smooth;
     --primary: 85, 136, 255;
+    --red: 199, 52, 36;
+    --green: 88, 212, 74;
   }
 
+  /* Dark Mode */
   :root[data-theme="dark"] {
     color-scheme: dark;
     --textColor: 255, 255, 255;
@@ -19,6 +22,7 @@
     --contrastBg: 245, 245, 245;
     --background: 15, 15, 15;
   }
+  /* Light Mode */
   :root[data-theme="light"]{
     color-scheme: light;
     --textColor: 15, 15, 15;

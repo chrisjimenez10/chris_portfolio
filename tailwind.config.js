@@ -9,6 +9,8 @@ export default {
     extend: {
       colors: {
         primary: "rgba(var(--primary))",
+        red: "rgba(var(--red))",
+        green: "rgba(var(--green))",
         textColor: "rgba(var(--textColor))",
         surface: "rgba(var(--surface))",
         background: "rgba(var(--background))",
@@ -21,7 +23,7 @@ export default {
         third: "60",
       },
       boxShadow: {
-        shadow: "7px 7px rgba(var(--onBackground))",
+        shadow: "7px 7px rgba(var(--contrastBg))",
       }
     },
   },

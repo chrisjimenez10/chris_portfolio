@@ -13,7 +13,7 @@ const HamburgerMenu = ({navTitles, navIcons, classNames, themeButton}) => {
   return (
     <div className={`${classNames || ""} `}>
 
-      <div className="flex flex-col items-center justify-center space-y-4 w-full relative top-5">
+      <div className="flex flex-col items-center justify-center space-y-2 w-full relative top-2 z-10">
         <h1 className="text-textColor text-xl sm:text-2xl flex">
           <span className="font-bold">{developerName.substring(0, 11)}</span>
           <span className="font-extralight"> {developerName.substring(12,20)}</span>
@@ -39,7 +39,7 @@ const HamburgerMenu = ({navTitles, navIcons, classNames, themeButton}) => {
 
               {/* Tooltip on Hover */}
               <div className="absolute -top-[2.8rem] hidden group-hover:flex">
-                <div className="bg-surface relative flex text-background items-center p-[5px] rounded-[5px]">
+                <div className="bg-contrastBg relative flex text-background items-center p-[5px] rounded-[5px]">
                   <div>
                     <h1 className="text-[12px]">
                       {title}
@@ -47,7 +47,7 @@ const HamburgerMenu = ({navTitles, navIcons, classNames, themeButton}) => {
                   </div>
 
                   {/* Triangle */}
-                  <div className="border-solid border-t-surface border-t-8 border-x-transparent border-x-[6px] border-b-0 absolute top-7 left-1"></div>               
+                  <div className="border-solid border-t-contrastBg border-t-8 border-x-transparent border-x-[6px] border-b-0 absolute top-7 left-1"></div>               
                 </div>
               </div>
 

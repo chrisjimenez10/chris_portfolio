@@ -55,6 +55,7 @@ const ParticlesContainer = ({classNames}) => {
         particles: {
             color: {
                 value: "#0047AB",
+                opacity: 0.5,
             },
             links: {
                 color: "#5588FF",

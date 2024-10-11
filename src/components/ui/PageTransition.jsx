@@ -53,7 +53,7 @@ const PageTransition = ({children}) => {
       <div className="">
         <Navbar />
         {children}
-        <Footer />
+        <Footer className="fixed bottom-[90px] w-full md:bottom-3"/>
       </div>
       
     </>

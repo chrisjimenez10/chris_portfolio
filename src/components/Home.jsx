@@ -15,7 +15,7 @@ const Home = () => {
 
   return (
 
-    <div className="flex flex-col space-y-7 sm:space-y-[3rem] lg:flex-row lg:gap-5 lg:justify-center lg:items-center items-center justify-around md:translate-y-10  md:mt-[3.5rem]">
+    <div className="flex flex-col space-y-7 sm:space-y-[3rem] lg:flex-row lg:gap-5 lg:justify-center lg:items-center items-center justify-around md:mt-[3.5rem]">
       <ParticlesContainer classNames="z-0"/>
 
       <div className="z-10 flex flex-col items-center justify-center gap-5">
@@ -32,8 +32,8 @@ const Home = () => {
       </div>
 
       <div className="z-10 flex flex-col items-center justify-center px-[10px] lg:items-start lg:justify-start space-y-2 md:space-y-5">
-        <WordEffect phrase={homeHeading} classNames={`text-2xl sm:text-4xl sm:text-center font-bold text-textColor`} headingType="h1"/>       
-        <WordEffect phrase={homeDescription} classNames={`text-sm sm:text-xl sm:text-center text-textColor`} headingType="h2"/>
+        <WordEffect phrase={homeHeading} classNames={`text-2xl xs:text-3xl sm:text-4xl sm:text-center font-bold text-textColor`} headingType="h1"/>       
+        <WordEffect phrase={homeDescription} classNames={`text-sm xs:text-base sm:text-xl sm:text-center text-textColor`} headingType="h2"/>
         
         <div className="flex space-x-5 translate-y-3">
           {/* We can use the browser's built-in functionality of downloading a PDF using anchor tag: 1.The href attribute is the path to the PDF document, 2.The download attribute is the name given to the file when downloaded by user and it also FORCES download rather than opening in browser --> NOTE: We have to place the PDF in the Public directory to use it this way */}

@@ -15,13 +15,13 @@ const Home = () => {
 
   return (
 
-    <div className="flex flex-col space-y-7 sm:space-y-[3rem] lg:flex-row lg:gap-5 lg:justify-center lg:items-center items-center justify-around md:mt-[3.5rem]">
+    <div className="flex flex-col space-y-7 sm:space-y-[3rem] items-center justify-center md:mt-[3.5rem] lg:mt-[9rem] lg:mx-5 lg:gap-7 lg:flex-row lg:justify-around">
       <ParticlesContainer classNames="z-0"/>
 
       <div className="z-10 flex flex-col items-center justify-center gap-5">
         <div className="bg-contrastBg p-[2px] rounded-2xl shadow-shadow">
           <div className="bg-surface p-7 rounded-2xl">
-            <img src={chrisPortrait} alt="Chris Portrait" className="bg-black/75 rounded-2xl w-[200px] sm:w-[300px]" />
+            <img src={chrisPortrait} alt="Chris Portrait" className="bg-black/75 rounded-2xl w-[200px] sm:w-[300px] lg:w-[400px] xl:w-[450px]" />
           </div>
         </div>
         <h1 className="hidden md:flex text-textColor text-2xl items-center justify-center">
@@ -31,9 +31,9 @@ const Home = () => {
         </h1>
       </div>
 
-      <div className="z-10 flex flex-col items-center justify-center px-[10px] lg:items-start lg:justify-start space-y-2 md:space-y-5">
-        <WordEffect phrase={homeHeading} classNames={`text-2xl xs:text-3xl sm:text-4xl sm:text-center font-bold text-textColor`} headingType="h1"/>       
-        <WordEffect phrase={homeDescription} classNames={`text-sm xs:text-base sm:text-xl sm:text-center text-textColor`} headingType="h2"/>
+      <div className="z-10 flex flex-col items-center justify-center px-[10px] space-y-2 md:space-y-5 lg:w-[800px]">
+        <WordEffect phrase={homeHeading} classNames={`text-2xl xs:text-3xl sm:text-4xl sm:text-center lg:text-5xl xl:text-6xl lg:text-start font-bold text-textColor`} headingType="h1"/>       
+        <WordEffect phrase={homeDescription} classNames={`text-sm xs:text-base sm:text-xl sm:text-center lg:text-start lg:text-2xl xl:text-3xl text-textColor font-semibold`} headingType="h2"/>
         
         <div className="flex space-x-5 translate-y-3">
           {/* We can use the browser's built-in functionality of downloading a PDF using anchor tag: 1.The href attribute is the path to the PDF document, 2.The download attribute is the name given to the file when downloaded by user and it also FORCES download rather than opening in browser --> NOTE: We have to place the PDF in the Public directory to use it this way */}

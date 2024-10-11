@@ -153,6 +153,24 @@ const devOps = [
         title: "AWS",
         image: awsIcon,
     },
+];
+
+const webDevelopment = [
+    {
+        id: 1,
+        title: "HTML",
+        image: ,
+    },
+    {
+        id: 2,
+        title: "CSS",
+        image: ,
+    },
+    {
+        id: 3,
+        title: "JavaScript",
+        image: ,
+    },
 ]
 
 export {
@@ -160,5 +178,5 @@ export {
     navIcons,
     backendDevelopment,
     devOps,
-    
+
 };

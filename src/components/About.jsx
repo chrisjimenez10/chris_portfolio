@@ -8,7 +8,7 @@ const About = () => {
   console.log(aboutDescription.indexOf("impact"))
 
   return (
-    <Section id="about" classNames="bg-green/85">
+    <Section id="about" classNames="">
       <div className="flex flex-col lg:flex-row items-center justify-center p-5 gap-5">
 
         <div className="">
@@ -26,6 +26,9 @@ const About = () => {
         </div>
 
         <Skills />
+
+        {/* Expand BOTTOM for mobile device screen sizes, so that bottom nav bar DOES NOT cover content */}
+        <div className="h-[150px] w-full bg-primary/20 sm:hidden"/>
 
       </div>
     </Section>

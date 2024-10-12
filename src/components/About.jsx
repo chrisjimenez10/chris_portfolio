@@ -28,7 +28,7 @@ const About = () => {
         <Skills />
 
         {/* Expand BOTTOM for mobile device screen sizes, so that bottom nav bar DOES NOT cover content */}
-        <div className="h-[150px] w-full bg-primary/20 sm:hidden"/>
+        <div className="h-[250px] w-full bg-primary/20 xs:hidden"/>
 
       </div>
     </Section>

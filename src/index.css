@@ -18,6 +18,7 @@
   :root[data-theme="dark"] {
     color-scheme: dark;
     --textColor: 255, 255, 255;
+    --textAccent: 232, 230, 225;
     --surface: 45, 45, 45;
     --contrastBg: 245, 245, 245;
     --background: 15, 15, 15;
@@ -26,6 +27,7 @@
   :root[data-theme="light"]{
     color-scheme: light;
     --textColor: 15, 15, 15;
+    --textAccent: 54, 52, 49;
     --surface: 245, 245, 245;
     --contrastBg: 15, 15, 15;
     --background: 255, 255, 255;

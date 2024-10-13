@@ -1,5 +1,5 @@
 //Imports
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { backendDevelopment, devOps, webDevelopment, uiuxDesign } from "../../constants";
 
 
@@ -8,18 +8,14 @@ const Skills = () => {
     //State
     const [skills, setSkills] = useState("frontend");
 
-    useEffect(()=>{
-
-    }, [])
-
 
   return (
-    <div className="flex flex-col text-textColor gap-3">
-        <h1 className="border-b border-primary text-center text-2xl">Skills</h1>
-        <div className="flex gap-10 items-center justify-center text-lg">
-            <h1 className="cursor-pointer hover:underline" onClick={()=> setSkills("frontend")}>Frontend</h1>
-            <h1 className="cursor-pointer hover:underline" onClick={()=> setSkills("backend")}>Backend</h1>
-            <h1 className="cursor-pointer hover:underline" onClick={()=> setSkills("devops")}>DevOps</h1>
+    <div className="flex flex-col text-textColor gap-10">
+
+        <div className="flex gap-10 items-center justify-center">
+            <h1 className={`cursor-pointer relative nav ${skills === "frontend" ? "navStatic" : "text-textAccent/65"}`} onClick={()=> setSkills("frontend")}>Frontend</h1>
+            <h1 className={`cursor-pointer relative nav ${skills === "backend" ? "navStatic" : "text-textAccent/65"}`} onClick={()=> setSkills("backend")}>Backend</h1>
+            <h1 className={`cursor-pointer relative nav ${skills === "devops" ? "navStatic" : "text-textAccent/65"}`} onClick={()=> setSkills("devops")}>DevOps</h1>
         </div>
 
         {skills === "frontend" && (
@@ -28,8 +24,8 @@ const Skills = () => {
                     <h2 className='text-center'>Web Development</h2>
                     <div className="flex flex-wrap gap-5 items-center justify-center">
                         {webDevelopment.map(({id, title, image})=>(
-                            <div key={id} className="">
-                                <img src={image} alt={title} width={40} height={40} className="p-[2px]"/>
+                            <div key={id}>
+                                <img src={image} alt={title} width={40} height={40}/>
                             </div>
                         ))}
                     </div>

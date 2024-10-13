@@ -15,6 +15,7 @@ export default {
         red: "rgba(var(--red))",
         green: "rgba(var(--green))",
         textColor: "rgba(var(--textColor))",
+        textAccent: "rgba(var(--textAccent))",
         surface: "rgba(var(--surface))",
         background: "rgba(var(--background))",
         contrastBg: "rgba(var(--contrastBg))",

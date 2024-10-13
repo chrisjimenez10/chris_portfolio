@@ -12,6 +12,15 @@ import {
     awsIcon,
     dockerIcon,
     terraformIcon,
+    cssIcon,
+    htmlIcon,
+    javascriptIcon,
+    reactIcon,
+    tailwindIcon,
+    framermotionIcon,
+    wordpressIcon,
+    figmaIcon,
+    canvaIcon,
 
 
 } from "../assets/index.js";
@@ -108,6 +117,7 @@ const backendDevelopment = [
         id: 2,
         title: "NodeJS",
         image: nodeJsIcon,
+        bg: true,
     },
     {
         id: 3,
@@ -142,6 +152,7 @@ const devOps = [
         id: 2,
         title: "Docker",
         image: dockerIcon,
+        bg: true,
     },
     {
         id: 3,
@@ -152,13 +163,67 @@ const devOps = [
         id: 4,
         title: "AWS",
         image: awsIcon,
+        bg: true,
     },
-]
+];
+
+const webDevelopment = [
+    {
+        id: 1,
+        title: "HTML",
+        image: htmlIcon,
+    },
+    {
+        id: 2,
+        title: "CSS",
+        image: cssIcon,
+    },
+    {
+        id: 3,
+        title: "JavaScript",
+        image: javascriptIcon,
+    },
+    {
+        id: 4,
+        title: "ReactJS",
+        image: reactIcon,
+    },
+    {
+        id: 5,
+        title: "TailwindCSS",
+        image: tailwindIcon,
+    },
+    {
+        id: 6,
+        title: "FramerMotion",
+        image: framermotionIcon,
+    },
+    {
+        id: 7,
+        title: "WordPress",
+        image: wordpressIcon,
+    },
+];
+
+const uiuxDesign = [
+    {
+        id: 1,
+        title: "Figma",
+        image: figmaIcon,
+    },
+    {
+        id: 2,
+        title: "Canva",
+        image: canvaIcon,
+    },
+];
 
 export {
     navTitles,
     navIcons,
     backendDevelopment,
     devOps,
-    
+    webDevelopment,
+    uiuxDesign,
+
 };

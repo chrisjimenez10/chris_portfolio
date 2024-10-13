@@ -1,14 +1,14 @@
 //Imports
 import { aboutHeading, aboutDescription } from "../constants";
 //UI
-import Skills from "./ui/Skills";
 import Section from "./ui/Section";
+import CredentialsContainer from "./ui/CredentialsContainer";
 
 const About = () => {
   console.log(aboutDescription.indexOf("impact"))
 
   return (
-    <Section id="about" classNames="bg-green/85">
+    <Section id="about" classNames="">
       <div className="flex flex-col lg:flex-row items-center justify-center p-5 gap-5">
 
         <div className="">
@@ -25,7 +25,10 @@ const About = () => {
           </h2>
         </div>
 
-        <Skills />
+        <CredentialsContainer />
+
+        {/* Expand BOTTOM for mobile device screen sizes, so that bottom nav bar DOES NOT cover content */}
+        <div className="h-[250px] w-full bg-primary/20 xs:hidden"/>
 
       </div>
     </Section>

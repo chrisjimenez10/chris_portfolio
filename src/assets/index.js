@@ -18,6 +18,17 @@ import pythonIcon from "./svgs/python.svg";
 import awsIcon from "./svgs/aws.svg";
 import dockerIcon from "./svgs/docker.svg";
 import terraformIcon from "./svgs/terraform.svg";
+//Tech Icons (Web Development)
+import cssIcon from "./svgs/css.svg";
+import framermotionIcon from "./svgs/framermotion.svg";
+import htmlIcon from "./svgs/html.svg";
+import javascriptIcon from "./svgs/javascript.svg";
+import reactIcon from "./svgs/react.svg";
+import tailwindIcon from "./svgs/tailwind.svg";
+import wordpressIcon from "./svgs/wordpress.svg";
+//Tech Icons (UI/UX Design)
+import figmaIcon from "./svgs/figma.svg";
+import canvaIcon from "./svgs/canva.svg";
 
 
 
@@ -36,5 +47,14 @@ export {
     awsIcon,
     dockerIcon,
     terraformIcon,
-
+    cssIcon,
+    framermotionIcon,
+    htmlIcon,
+    javascriptIcon,
+    reactIcon,
+    tailwindIcon,
+    wordpressIcon,
+    figmaIcon,
+    canvaIcon,
+    
 };

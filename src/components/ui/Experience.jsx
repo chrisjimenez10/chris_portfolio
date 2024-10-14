@@ -3,7 +3,7 @@ import { experience } from "../../constants";
 
 const Experience = () => {
   return (
-    <div className="flex flex-col gap-8 items-center justify-center">
+    <div className="h-[300px] flex flex-col gap-8 items-center">
       {experience.map(({id, title, date})=>(
         <div key={id} className="flex flex-col gap-2 items-center justify-center text-center text-textAccent/85">
             <h1>{title}</h1>

@@ -28,7 +28,7 @@ const About = () => {
         <CredentialsContainer />
 
         {/* Expand BOTTOM for mobile device screen sizes, so that bottom nav bar DOES NOT cover content */}
-        <div className="h-[250px] w-full bg-primary/20 xs:hidden"/>
+        <div className="h-[100px] w-full bg-primary/20 xs:hidden"/>
 
       </div>
     </Section>

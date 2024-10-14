@@ -1,7 +1,8 @@
 //Imports
 import { useState } from "react";
 //Components
-
+import Credentials from "./Credentials";
+import Experience from "./Experience";
 //UI
 import Skills from "./Skills";
 
@@ -35,6 +36,12 @@ const CredentialsContainer = () => {
 
         {category === "skills" && (
             <Skills />
+        )}
+        {category === "experience" && (
+            <Experience />
+        )}
+        {category === "credentials" && (
+            <Credentials />
         )}
     </div>
   )

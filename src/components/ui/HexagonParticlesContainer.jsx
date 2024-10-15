@@ -5,7 +5,9 @@ import { loadFull } from "tsparticles";
 import { loadPolygonPath, polygonPathName } from "@tsparticles/path-polygon";
 import HexagonOptions from "../../assets/json/particles.json"; //We can use a JSON file for the "options" object (Exported from tsParticles website)
 
-const HexagonParticlesContainer = ({classNames}) => {
+
+
+const HexagonParticlesContainer = ({classNames, theme}) => {
 
     //Initialize Engine
     useEffect(()=>{
@@ -93,7 +95,7 @@ return (
             trail: {
               fill: {
                 color: {
-                    value: "#121212", //Dynamic color fill change --> Light Mode: "#fff" - Dark Mode: "#121212"
+                    value: `${theme === "dark" ? "#121212" : "#fff"}`, //Dynamic color fill change --> Light Mode: "#fff" - Dark Mode: "#121212"
                 }
               },
               length: 20,
@@ -120,7 +122,7 @@ return (
           }
         },
         background: {
-          color: "#121212" //Dynamic color fill change --> Light Mode: #fff - Dark Mode: "#121212"
+          color: `${theme === "dark" ? "#121212" : "#fff"}` //Dynamic color fill change --> Light Mode: #fff - Dark Mode: "#121212"
         },
         fullScreen: {
             enable: true,

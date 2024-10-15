@@ -11,20 +11,19 @@ import HexagonParticlesContainer from "./ui/HexagonParticlesContainer";
 const About = () => {
 
   //Context
-  const {hexBg, setHexBg} = useContext(ThemeContext);
-  console.log(hexBg)
+  const {theme} = useContext(ThemeContext);
 
   return (
     <Section id="about" classNames="md:mt-[7.8rem] 2xl:mt-[12rem]">
-      <HexagonParticlesContainer classNames="z-0"/>
+      <HexagonParticlesContainer classNames="z-0" theme={theme}/>
       <div className="flex flex-col items-center justify-center p-5 gap-5 xl:flex-row xl:justify-around">
 
-        <div className={`flex flex-col gap-4 items-center justify-center lg:w-[750px] xl:gap-8 lg:text-center xl:text-start xl:items-start xl:pl-10 z-10 ${hexBg ? "bg-hexBg" : "bg-background"}`}>
+        <div className={`flex flex-col gap-4 items-center justify-center lg:w-[750px] xl:gap-8 lg:text-center xl:text-start xl:items-start xl:pl-10 z-10 ${theme === "dark" ? "bg-hexBg/65 rounded-2xl p-2" : "bg-background/75"}`}>
           <h1 className="text-textColor text-2xl sm:text-3xl lg:text-5xl font-bold">
             <span className="text-primary">{aboutHeading.substring(0, 27)}</span>
             <span>{aboutHeading.substring(27, 50)}</span>
           </h1>
-          <h2 className="text-textColor text-base sm:text-lg lg:text-xl xl:leading-loose">
+          <h2 className="text-textColor text-base sm:text-lg lg:text-xl leading-relaxed md:leading-loose lg:leading-loose xl:leading-loose">
             <span>{aboutDescription.substring(0, 3)}</span>
             <span className="text-primary font-bold">{aboutDescription.substring(3, 23)}</span>
             <span>{aboutDescription.substring(23, 494)}</span>
@@ -32,10 +31,10 @@ const About = () => {
           <DynamicStats classNames="hidden xl:flex"/>
         </div>
 
-        <CredentialsContainer classNames="sm:mt-[3rem] xl:w-[650px] xl:h-[400px] z-10"/>
-
+        <CredentialsContainer classNames="sm:mt-[3rem] xl:w-[650px] xl:h-[400px] z-10" theme={theme}/>
+        
         {/* Expand BOTTOM for mobile device screen sizes, so that bottom nav bar DOES NOT cover content */}
-        <div className="h-[100px] w-full bg-primary/20 xs:hidden"/>
+        <div className="h-[100px] w-full xs:hidden"/>
 
       </div>
     </Section>

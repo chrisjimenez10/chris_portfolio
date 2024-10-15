@@ -6,15 +6,15 @@ import Experience from "./Experience";
 //UI
 import Skills from "./Skills";
 
-const CredentialsContainer = ({classNames}) => {
+const CredentialsContainer = ({classNames, theme}) => {
 
     //State
     const [category, setCategory] = useState("skills");
 
 
   return (
-    <div className={`flex flex-col gap-8 ${classNames || ""}`}>
-        <div className="flex gap-5 items-center justify-center bg-background">
+    <div className={`flex flex-col gap-8 rounded-2xl ${classNames || ""} ${theme === "dark" ? "bg-hexBg/65 p-2" : "bg-background/75 p-2"}`}>
+        <div className="flex gap-5 items-center justify-center ">
             <div className="">
                 <h1 className={`text-xl xl:text-2xl font-semibold ${category === "skills" ? "text-primary" : "text-textColor"} transition-colors hover:text-primary hover:cursor-pointer`} onClick={()=> setCategory("skills")}>Skills</h1>
             </div>

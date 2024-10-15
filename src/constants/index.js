@@ -135,7 +135,7 @@ const backendDevelopment = [
         image: linuxIcon,
     },
     {
-        id: 5,
+        id: 6,
         title: "Git",
         image: gitIcon,
     },

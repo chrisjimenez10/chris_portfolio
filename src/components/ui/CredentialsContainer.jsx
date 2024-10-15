@@ -1,5 +1,6 @@
 //Imports
 import { useState } from "react";
+import { motion } from "framer-motion";
 //Components
 import Credentials from "./Credentials";
 import Experience from "./Experience";
@@ -10,6 +11,18 @@ const CredentialsContainer = ({classNames, theme}) => {
 
     //State
     const [category, setCategory] = useState("skills");
+
+    //Animation Variants
+    const transitionVariants = {
+        initial: {
+            opacity: 0,
+            y: "-20%",
+        },
+        animate: {
+            opacity: 1,
+            y: "0%",
+        },
+    };
 
 
   return (
@@ -35,13 +48,37 @@ const CredentialsContainer = ({classNames, theme}) => {
         </div>
 
         {category === "skills" && (
-            <Skills />
+            <motion.div
+            id="skills"
+            variants={transitionVariants}
+            initial="initial"
+            animate="animate"
+            transition={{delay: 0, duration: 1, ease: "easeInOut"}}
+            >
+                <Skills />
+            </motion.div>
         )}
         {category === "experience" && (
-            <Experience />
+            <motion.div
+            id="experience"
+            variants={transitionVariants}
+            initial="initial"
+            animate="animate"
+            transition={{delay: 0, duration: 1, ease: "easeInOut"}}
+            >
+                <Experience />
+            </motion.div>
         )}
         {category === "credentials" && (
-            <Credentials />
+            <motion.div
+            id="credentials"
+            variants={transitionVariants}
+            initial="initial"
+            animate="animate"
+            transition={{delay: 0, duration: 1, ease: "easeInOut"}}
+            >
+                <Credentials />
+            </motion.div>
         )}
     </div>
   )

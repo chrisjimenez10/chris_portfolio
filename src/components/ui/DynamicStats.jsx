@@ -3,7 +3,7 @@ import CountUp from "react-countup";
 
 const DynamicStats = ({classNames}) => {
   return (
-    <div className={`${classNames || "flex"} gap-5 text-start `}>
+    <div className={`${classNames || "flex"} gap-5 text-start`}>
       
       <div className="flex flex-col">
         <CountUp
@@ -14,14 +14,14 @@ const DynamicStats = ({classNames}) => {
         suffix=" +" //Static text AFTER the Number
         redraw={true}
         useEasing={true}
-        className="text-primary font-extrabold text-4xl"
+        className="text-primary font-extrabold text-3xl sm:text-4xl"
         />
-        <h2 className="text-textColor font-semibold w-20">Years of Experience</h2>
+        <h2 className="text-textColor text-sm sm:text-base font-semibold w-20">Years of Experience</h2>
       </div>
       
 
       {/* Vertical Line */}
-      <div className="h-[5.3rem] w-[.05rem] bg-contrastBg/45"/>
+      <div className="h-[4.6rem] w-[0.05rem] sm:h-[5.3rem] sm:w-[.05rem] bg-contrastBg/45"/>
 
       <div className="flex flex-col">
       <CountUp
@@ -32,13 +32,13 @@ const DynamicStats = ({classNames}) => {
         suffix=" +" //Static text AFTER the Number
         redraw={true}
         useEasing={true}
-        className="text-primary font-extrabold text-4xl"
+        className="text-primary font-extrabold text-3xl sm:text-4xl"
         />
-        <h2 className="text-textColor font-semibold w-20">Satisfied Clients</h2>
+        <h2 className="text-textColor text-sm sm:text-base font-semibold w-20">Satisfied Clients</h2>
       </div>
 
       {/* Vertical Line */}
-      <div className="h-[5.3rem] w-[.05rem] bg-contrastBg/45"/>
+      <div className="h-[4.6rem] w-[0.05rem] sm:h-[5.3rem] sm:w-[.05rem] bg-contrastBg/45"/>
 
       <div className="flex flex-col">
       <CountUp
@@ -49,9 +49,9 @@ const DynamicStats = ({classNames}) => {
         suffix=" +" //Static text AFTER the Number
         redraw={true}
         useEasing={true}
-        className="text-primary font-extrabold text-4xl"
+        className="text-primary font-extrabold text-3xl sm:text-4xl"
         />
-        <h2 className="text-textColor font-semibold w-20">Finished Projects</h2>
+        <h2 className="text-textColor text-sm sm:text-base font-semibold w-20">Finished Projects</h2>
       </div>
     </div>
   )

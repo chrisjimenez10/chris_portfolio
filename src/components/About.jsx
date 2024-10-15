@@ -2,6 +2,7 @@
 import { aboutHeading, aboutDescription } from "../constants";
 import { useContext } from "react";
 import { ThemeContext } from "../App";
+import { motion } from "framer-motion";
 //UI
 import Section from "./ui/Section";
 import CredentialsContainer from "./ui/CredentialsContainer";
@@ -19,7 +20,7 @@ const About = () => {
       <div className="flex flex-col items-center justify-center p-5 gap-5 xl:flex-row xl:justify-around">
 
         <div className={`flex flex-col gap-4 items-center justify-center lg:w-[750px] xl:gap-8 lg:text-center xl:text-start xl:items-start xl:pl-10 z-10 ${theme === "dark" ? "bg-hexBg/65 rounded-2xl p-2" : "bg-background/75"}`}>
-          <h1 className="text-textColor text-2xl sm:text-3xl lg:text-5xl font-bold">
+          <h1 className="text-textColor text-3xl lg:text-5xl font-bold">
             <span className="text-primary">{aboutHeading.substring(0, 27)}</span>
             <span>{aboutHeading.substring(27, 50)}</span>
           </h1>
@@ -28,13 +29,13 @@ const About = () => {
             <span className="text-primary font-bold">{aboutDescription.substring(3, 23)}</span>
             <span>{aboutDescription.substring(23, 494)}</span>
           </h2>
-          <DynamicStats classNames="hidden xl:flex"/>
+          <DynamicStats classNames="flex mt-[2rem] sm:mt-10 xl:mt-0"/>
         </div>
 
-        <CredentialsContainer classNames="sm:mt-[3rem] xl:w-[650px] xl:h-[400px] z-10" theme={theme}/>
+        <CredentialsContainer classNames="mt-[2rem] sm:mt-[3rem] xl:w-[650px] xl:h-[400px] z-10" theme={theme}/>
         
         {/* Expand BOTTOM for mobile device screen sizes, so that bottom nav bar DOES NOT cover content */}
-        <div className="h-[100px] w-full xs:hidden"/>
+        <div className="h-[100px] w-full md:hidden"/>
 
       </div>
     </Section>

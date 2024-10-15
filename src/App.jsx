@@ -19,11 +19,17 @@ export const ThemeContext = createContext(null);
 
 const App = () => {
 
+  //Local Storage
+  const initializeTheme = () => {
+    const storedTheme = localStorage.getItem("theme");
+    return storedTheme || "dark";
+  };
+
   //State
-  const [hexBg, setHexBg] = useState(true);
+  const [theme, setTheme] = useState(initializeTheme);
 
   return (
-    <ThemeContext.Provider value={{hexBg, setHexBg}}>
+    <ThemeContext.Provider value={{theme, setTheme}}>
     <Suspense fallback={<Loader />}>
     <AnimatePresence mode="wait">
         <PageTransition>

@@ -2,6 +2,7 @@
 import {Routes, Route} from "react-router-dom";
 import { Suspense, lazy } from "react";
 import { AnimatePresence } from "framer-motion";
+import { createContext, useState } from "react";
 //Components
 import Home from "./components/Home";
 import Loader from "./components/ui/Loader";
@@ -14,9 +15,15 @@ const Error = lazy(()=>import("./components/Error"));
 //UI Components
 import PageTransition from "./components/ui/PageTransition";
 
+export const ThemeContext = createContext(null);
+
 const App = () => {
 
+  //State
+  const [hexBg, setHexBg] = useState(true);
+
   return (
+    <ThemeContext.Provider value={{hexBg, setHexBg}}>
     <Suspense fallback={<Loader />}>
     <AnimatePresence mode="wait">
         <PageTransition>
@@ -32,6 +39,7 @@ const App = () => {
         </PageTransition>
     </AnimatePresence>
     </Suspense>
+    </ThemeContext.Provider>
   )
 }
 

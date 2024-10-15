@@ -1,5 +1,7 @@
 //Imports
 import { aboutHeading, aboutDescription } from "../constants";
+import { useContext } from "react";
+import { ThemeContext } from "../App";
 //UI
 import Section from "./ui/Section";
 import CredentialsContainer from "./ui/CredentialsContainer";
@@ -8,12 +10,16 @@ import HexagonParticlesContainer from "./ui/HexagonParticlesContainer";
 
 const About = () => {
 
+  //Context
+  const {hexBg, setHexBg} = useContext(ThemeContext);
+  console.log(hexBg)
+
   return (
     <Section id="about" classNames="md:mt-[7.8rem] 2xl:mt-[12rem]">
       <HexagonParticlesContainer classNames="z-0"/>
       <div className="flex flex-col items-center justify-center p-5 gap-5 xl:flex-row xl:justify-around">
 
-        <div className="flex flex-col gap-4 items-center justify-center lg:w-[750px] xl:gap-8 lg:text-center xl:text-start xl:items-start xl:pl-10 z-10">
+        <div className={`flex flex-col gap-4 items-center justify-center lg:w-[750px] xl:gap-8 lg:text-center xl:text-start xl:items-start xl:pl-10 z-10 ${hexBg ? "bg-hexBg" : "bg-background"}`}>
           <h1 className="text-textColor text-2xl sm:text-3xl lg:text-5xl font-bold">
             <span className="text-primary">{aboutHeading.substring(0, 27)}</span>
             <span>{aboutHeading.substring(27, 50)}</span>

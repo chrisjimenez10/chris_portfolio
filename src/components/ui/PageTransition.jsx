@@ -1,7 +1,6 @@
 //Imports
 import { motion } from "framer-motion";
 import { useLocation } from "react-router-dom";
-
 //Components
 import Footer from "../Footer";
 import Navbar from "../Navbar";
@@ -50,6 +49,7 @@ const PageTransition = ({children}) => {
       />
 
       {/* Pushing div containing the component that is rendered so it appears BELOW the Header/Navbar */}
+      
       <div>
         <Navbar />
         {children}

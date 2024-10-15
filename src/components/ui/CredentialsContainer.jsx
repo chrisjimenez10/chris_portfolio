@@ -14,7 +14,7 @@ const CredentialsContainer = ({classNames}) => {
 
   return (
     <div className={`flex flex-col gap-8 ${classNames || ""}`}>
-        <div className="flex gap-5 items-center justify-center">
+        <div className="flex gap-5 items-center justify-center bg-background">
             <div className="">
                 <h1 className={`text-xl xl:text-2xl font-semibold ${category === "skills" ? "text-primary" : "text-textColor"} transition-colors hover:text-primary hover:cursor-pointer`} onClick={()=> setCategory("skills")}>Skills</h1>
             </div>

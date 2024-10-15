@@ -1,21 +1,19 @@
 //Imports
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext} from "react";
+import { ThemeContext } from "../../App";
 import { IoIosSunny } from "react-icons/io";
 import { BsMoonStarsFill } from "react-icons/bs";
 import { motion } from "framer-motion";
 
+
 const ToggleThemeButton = () => {
 
-  //Local Storage
-  const initializeTheme = () => {
-    const storedTheme = localStorage.getItem("theme");
-    return storedTheme || "dark";
-  }
+  //Context (Global State - Theme)
+  const {theme, setTheme} = useContext(ThemeContext);
 
   //State
   const [icon, setIcon] = useState("sun");
-  const [theme, setTheme] = useState(initializeTheme);
-
+  
   //Animation
   const transitionVariants = {
     initial: {

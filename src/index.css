@@ -18,10 +18,11 @@
   :root[data-theme="dark"] {
     color-scheme: dark;
     --textColor: 255, 255, 255;
-    --textAccent: 232, 230, 225;
+    --textAccent: 212, 220, 225;
     --surface: 45, 45, 45;
     --contrastBg: 245, 245, 245;
     --background: 15, 15, 15;
+    --hexBg: 11, 11, 11;
   }
   /* Light Mode */
   :root[data-theme="light"]{

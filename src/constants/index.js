@@ -135,7 +135,7 @@ const backendDevelopment = [
         image: linuxIcon,
     },
     {
-        id: 5,
+        id: 6,
         title: "Git",
         image: gitIcon,
     },
@@ -218,6 +218,40 @@ const uiuxDesign = [
     },
 ];
 
+const experience = [
+    {
+        id: 1,
+        title: "Software Engineer - Freelance",
+        date: "2024",
+    },
+    {
+        id: 2,
+        title: "Software Engineering Fellow - General Assembly",
+        date: "2024",
+    },
+];
+
+const credentials = [
+    {
+        id: 1,
+        title: "Software Engineering Bootcamp",
+        institution: "General Assembly | New York, NY",
+        date: "2024"
+    },
+    {
+        id: 2,
+        title: "Certified Tester Foundation Level",
+        institution: "ASTQB/ISTQB | US",
+        date: "2023",
+    },
+    {
+        id: 3,
+        title: "Bachelor of Science in Health Sciences",
+        institution: "Rush University | Chicago, IL",
+        date: "2019",
+    },
+]
+
 export {
     navTitles,
     navIcons,
@@ -225,5 +259,7 @@ export {
     devOps,
     webDevelopment,
     uiuxDesign,
+    experience,
+    credentials,
 
 };

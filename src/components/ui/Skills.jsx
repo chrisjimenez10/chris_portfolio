@@ -19,7 +19,7 @@ const Skills = () => {
         </div>
 
         {skills === "frontend" && (
-            <div className="flex flex-col gap-8">
+            <div className="h-[250px] flex flex-col gap-8">
                 <div className="flex flex-col gap-2">
                     <h2 className='text-center'>Web Development</h2>
                     <div className="flex flex-wrap gap-5 items-center justify-center">
@@ -45,7 +45,7 @@ const Skills = () => {
         )}
 
         {skills === "backend" && (
-            <div className="flex flex-col gap-3">
+            <div className="h-[250px] flex flex-col gap-3">
                 <h2 className='text-center'>Backend Development</h2>
                 <div className="flex flex-wrap gap-8 items-center justify-center">
                     {backendDevelopment.map(({id, title, image, bg})=>(
@@ -58,7 +58,7 @@ const Skills = () => {
         )}
 
         {skills === "devops" && (            
-            <div className="flex flex-col gap-3">
+            <div className="h-[250px] flex flex-col gap-3">
                 <h2 className='text-center'>DevOps</h2>
                 <div className="flex flex-wrap gap-8 items-center justify-center">
                     {devOps.map(({id, title, image, bg})=>(

@@ -1,11 +1,23 @@
-
+//Imports
+import { useContext } from "react";
+import { ThemeContext } from "../App";
+//UI
+import Section from "./ui/Section";
+import ChangeStyle from "./ui/ChangeStyle";
 
 const Projects = () => {
+
+    //Context
+    const {style} = useContext(ThemeContext);
+
   return (
     
-    <div className="flex items-center justify-center">
+    <Section>
+    <div className={`flex flex-col items-center justify-center ${style && `bg-${style}`}`}>
       <h1 className="text-textColor text-2xl">Projects</h1>
+      <ChangeStyle />
     </div>
+    </Section>
     
   )
 }

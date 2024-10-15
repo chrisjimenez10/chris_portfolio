@@ -25,11 +25,17 @@ const App = () => {
     return storedTheme || "dark";
   };
 
+  const initializeStyle = () => {
+    const storedStyle = localStorage.getItem("style");
+    return storedStyle || "primary";
+  };
+
   //State
   const [theme, setTheme] = useState(initializeTheme);
+  const [style, setStyle] = useState(initializeStyle);
 
   return (
-    <ThemeContext.Provider value={{theme, setTheme}}>
+    <ThemeContext.Provider value={{theme, setTheme, style, setStyle}}>
     <Suspense fallback={<Loader />}>
     <AnimatePresence mode="wait">
         <PageTransition>

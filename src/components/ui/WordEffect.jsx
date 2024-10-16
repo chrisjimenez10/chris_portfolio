@@ -1,6 +1,12 @@
+//Imports
 import { motion } from "framer-motion";
+import { useContext } from "react";
+import { ThemeContext } from "../../App";
 
 const WordEffect = ({phrase, classNames, headingType}) => {
+
+    //Context
+    const {style, colorVariants} = useContext(ThemeContext);
 
     //Phrase Split
         //We want to create an array of the characters in the string, so we can animate each character to fade in and render an elegant individual character reveal
@@ -29,7 +35,7 @@ const WordEffect = ({phrase, classNames, headingType}) => {
                 key={index}
                 transition={{duration: 0.6}}
                 variants={charVariants}
-                className={`${index < 31 ? "text-primary" : ""}`}
+                className={`${index < 31 ? colorVariants[style].text : ""}`}
                 >
                     {char}
                 </motion.span>

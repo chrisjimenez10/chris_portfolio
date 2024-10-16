@@ -14,7 +14,7 @@ const Contact = lazy(()=>import("./components/Contact"));
 const Error = lazy(()=>import("./components/Error"));
 //UI Components
 import PageTransition from "./components/ui/PageTransition";
-
+//Create/Export Context
 export const ThemeContext = createContext(null);
 
 const App = () => {
@@ -24,7 +24,6 @@ const App = () => {
     const storedTheme = localStorage.getItem("theme");
     return storedTheme || "dark";
   };
-
   const initializeStyle = () => {
     const storedStyle = localStorage.getItem("style");
     return storedStyle || "primary";
@@ -34,8 +33,24 @@ const App = () => {
   const [theme, setTheme] = useState(initializeTheme);
   const [style, setStyle] = useState(initializeStyle);
 
+  //Color Variants
+  const colorVariants = {
+    primary: {
+      bg: "bg-primary",
+      text: "text-primary hover:text-primary",
+    },
+    red: {
+      bg: "bg-red",
+      text: "text-red hover:text-red",
+    },
+    green: {
+      bg: "bg-green",
+      text: "text-green hover:text-green",
+    },
+  };
+
   return (
-    <ThemeContext.Provider value={{theme, setTheme, style, setStyle}}>
+    <ThemeContext.Provider value={{theme, setTheme, style, setStyle, colorVariants}}>
     <Suspense fallback={<Loader />}>
     <AnimatePresence mode="wait">
         <PageTransition>

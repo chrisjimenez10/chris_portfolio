@@ -12,7 +12,7 @@ import HexagonParticlesContainer from "./ui/HexagonParticlesContainer";
 const About = () => {
 
   //Context
-  const {theme} = useContext(ThemeContext);
+  const {theme, style, colorVariants} = useContext(ThemeContext);
 
   //Screen Size (xl = 1280px)
   const xl = 1280
@@ -75,15 +75,15 @@ const About = () => {
         transition={{delay: 0.2, duration: 2.5, ease: "easeInOut"}}
         className={`flex flex-col gap-4 items-center justify-center lg:w-[750px] xl:gap-8 lg:text-center xl:text-start xl:items-start xl:pl-10 z-10 ${theme === "dark" ? "bg-hexBg/65 rounded-2xl p-2" : "bg-background/75"}`}>
           <h1 className="text-textColor text-3xl lg:text-5xl font-bold">
-            <span className="text-primary">{aboutHeading.substring(0, 27)}</span>
+            <span className={`${colorVariants[style].text}`}>{aboutHeading.substring(0, 27)}</span>
             <span>{aboutHeading.substring(27, 50)}</span>
           </h1>
           <h2 className="text-textColor text-base sm:text-lg lg:text-xl leading-relaxed md:leading-loose lg:leading-loose xl:leading-loose">
             <span>{aboutDescription.substring(0, 3)}</span>
-            <span className="text-primary font-bold">{aboutDescription.substring(3, 23)}</span>
+            <span className={`${colorVariants[style].text} font-bold`}>{aboutDescription.substring(3, 23)}</span>
             <span>{aboutDescription.substring(23, 494)}</span>
           </h2>
-          <DynamicStats classNames="flex mt-[2rem] sm:mt-10 xl:mt-0"/>
+          <DynamicStats classNames="flex mt-[2rem] sm:mt-10 xl:mt-0" style={style} colorVariants={colorVariants}/>
         </motion.div>
 
         <motion.div 
@@ -94,7 +94,7 @@ const About = () => {
         animate="animate"
         transition={{delay: 0.2, duration: 2.5, ease: "easeInOut"}}
         className="z-10 ">
-          <CredentialsContainer classNames="mt-[2rem] sm:mt-[3rem] xl:w-[650px] xl:h-[400px] z-10" theme={theme}/>
+          <CredentialsContainer classNames="mt-[2rem] sm:mt-[3rem] xl:w-[650px] xl:h-[400px] z-10" theme={theme} style={style} colorVariants={colorVariants}/>
         </motion.div>
         {/* Expand BOTTOM for mobile device screen sizes, so that bottom nav bar DOES NOT cover content */}
         <div className="h-[100px] w-full md:hidden"/>

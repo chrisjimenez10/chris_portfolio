@@ -1,7 +1,8 @@
 //Imports
 import CountUp from "react-countup";
 
-const DynamicStats = ({classNames}) => {
+const DynamicStats = ({classNames, style, colorVariants}) => {
+
   return (
     <div className={`${classNames || "flex"} gap-5 text-start`}>
       
@@ -14,7 +15,7 @@ const DynamicStats = ({classNames}) => {
         suffix=" +" //Static text AFTER the Number
         redraw={true}
         useEasing={true}
-        className="text-primary font-extrabold text-3xl sm:text-4xl"
+        className={`${colorVariants[style].text} font-extrabold text-3xl sm:text-4xl`}
         />
         <h2 className="text-textColor text-sm sm:text-base font-semibold w-20">Years of Experience</h2>
       </div>
@@ -32,7 +33,7 @@ const DynamicStats = ({classNames}) => {
         suffix=" +" //Static text AFTER the Number
         redraw={true}
         useEasing={true}
-        className="text-primary font-extrabold text-3xl sm:text-4xl"
+        className={`${colorVariants[style].text} font-extrabold text-3xl sm:text-4xl`}
         />
         <h2 className="text-textColor text-sm sm:text-base font-semibold w-20">Satisfied Clients</h2>
       </div>
@@ -49,7 +50,7 @@ const DynamicStats = ({classNames}) => {
         suffix=" +" //Static text AFTER the Number
         redraw={true}
         useEasing={true}
-        className="text-primary font-extrabold text-3xl sm:text-4xl"
+        className={`${colorVariants[style].text} font-extrabold text-3xl sm:text-4xl`}
         />
         <h2 className="text-textColor text-sm sm:text-base font-semibold w-20">Finished Projects</h2>
       </div>

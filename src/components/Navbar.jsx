@@ -2,6 +2,7 @@
 import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 import { navTitles, navIcons } from "../constants";
+import ChangeStyle from "./ui/ChangeStyle";
 //Components
 import HamburgerMenu from "./ui/HamburgerMenu";
 //UI
@@ -29,6 +30,7 @@ const Navbar = () => {
             </div>
            )
           })}
+          <ChangeStyle />
         </nav>
 
         <nav className="flex justify-around items-center space-x-6">

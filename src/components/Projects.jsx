@@ -8,12 +8,13 @@ import ChangeStyle from "./ui/ChangeStyle";
 const Projects = () => {
 
     //Context
-    const {style} = useContext(ThemeContext);
+    const {style, colorVariants} = useContext(ThemeContext);
+
 
   return (
     
     <Section>
-    <div className={`flex flex-col items-center justify-center ${style && `bg-${style}`}`}>
+    <div className={`flex flex-col items-center justify-center ${colorVariants[style].bg}`}>
       <h1 className="text-textColor text-2xl">Projects</h1>
       <ChangeStyle />
     </div>

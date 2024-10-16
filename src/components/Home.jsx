@@ -5,6 +5,8 @@ import { RiFileDownloadLine } from "react-icons/ri";
 import { FaLocationArrow } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { developerName } from "../constants";
+import { useContext } from "react";
+import { ThemeContext } from "../App";
 //UI
 import WordEffect from "./ui/WordEffect";
 import ParticlesContainer from "./ui/ParticlesContainer";
@@ -12,6 +14,8 @@ import ParticlesContainer from "./ui/ParticlesContainer";
 
 const Home = () => {
 
+  //Context
+  const {style, colorVariants} = useContext(ThemeContext);
 
   return (
 
@@ -27,7 +31,7 @@ const Home = () => {
         <h1 className="hidden md:flex text-textColor text-2xl items-center justify-center">
           <span className="font-bold">{developerName.substring(0, 11)}</span>
           <span className="font-extralight"> {developerName.substring(12,20)}</span>
-          <span className="text-primary">{"."}</span>
+          <span className={`${colorVariants[style].text}`}>{"."}</span>
         </h1>
       </div>
 

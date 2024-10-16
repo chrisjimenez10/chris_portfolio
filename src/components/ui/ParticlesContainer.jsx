@@ -4,7 +4,28 @@ import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadFull } from "tsparticles";
 
 
-const ParticlesContainer = ({classNames}) => {
+const ParticlesContainer = ({classNames, style}) => {
+
+    //Switch Statement --> NOTE: Using switch statement to convert color into hex code for tsparticle properties
+    let particleColor = "";
+    let linkColor = "";
+    switch(style){
+        case "primary":
+            particleColor = "#0047AB";
+            linkColor = "#5588FF";
+            break;
+        case "red":
+            particleColor = "#c73424";
+            linkColor = "#f25949";
+            break;
+        case "green":
+            particleColor = "#58d44a";
+            linkColor = "#8efa82";
+            break;
+        default:
+            particleColor = "#f069cc"; //Pink
+            linkColor = "#f788da"; //Lighter Pink
+    };
 
     //Initialize Engine
     useEffect(()=>{
@@ -54,11 +75,11 @@ const ParticlesContainer = ({classNames}) => {
         },
         particles: {
             color: {
-                value: "#0047AB",
+                value: particleColor,
                 opacity: 0.5,
             },
             links: {
-                color: "#5588FF",
+                color: linkColor,
                 distance: 150,
                 enable: true,
                 opacity: 0.5,

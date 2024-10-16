@@ -20,7 +20,7 @@ const Home = () => {
   return (
 
     <div className="flex flex-col space-y-7 sm:space-y-[3rem] items-center justify-center md:mt-[3.5rem] lg:mt-[9rem] lg:mx-5 lg:gap-7 lg:flex-row lg:justify-around">
-      <ParticlesContainer classNames="z-0"/>
+      <ParticlesContainer classNames="z-0" style={style}/>
 
       <div className="z-10 flex flex-col items-center justify-center gap-5">
         <div className="bg-contrastBg p-[2px] rounded-2xl shadow-shadow">

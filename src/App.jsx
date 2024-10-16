@@ -5,7 +5,7 @@ import { AnimatePresence } from "framer-motion";
 import { createContext, useState } from "react";
 //Components
 import Home from "./components/Home";
-import Loader from "./components/ui/Loader";
+import Loader from "./components/design/Loader";
 //Lazy Loading
 const About = lazy(()=>import("./components/About"));
 const Projects = lazy(()=>import("./components/Projects"));
@@ -13,7 +13,7 @@ const Community = lazy(()=>import("./components/Community"));
 const Contact = lazy(()=>import("./components/Contact"));
 const Error = lazy(()=>import("./components/Error"));
 //UI Components
-import PageTransition from "./components/ui/PageTransition";
+import PageTransition from "./components/design/PageTransition";
 //Create/Export Context
 export const ThemeContext = createContext(null);
 

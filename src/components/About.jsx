@@ -4,10 +4,10 @@ import { useContext, useState, useEffect } from "react";
 import { ThemeContext } from "../App";
 import { motion } from "framer-motion";
 //UI
-import Section from "./ui/Section";
-import CredentialsContainer from "./ui/CredentialsContainer";
-import DynamicStats from "./ui/DynamicStats";
-import HexagonParticlesContainer from "./ui/HexagonParticlesContainer";
+import Section from "./design/Section";
+import CredentialsContainer from "./design/CredentialsContainer";
+import DynamicStats from "./design/DynamicStats";
+import HexagonParticlesContainer from "./design/HexagonParticlesContainer";
 
 const About = () => {
 

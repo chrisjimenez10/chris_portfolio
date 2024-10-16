@@ -2,13 +2,13 @@
 import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 import { navTitles, navIcons } from "../constants";
-import ChangeStyle from "./ui/ChangeStyle";
+import ChangeStyle from "./design/ChangeStyle";
 import { useContext } from "react";
 import { ThemeContext } from "../App";
 //Components
-import HamburgerMenu from "./ui/HamburgerMenu";
+import HamburgerMenu from "./design/HamburgerMenu";
 //UI
-import ToggleThemeButton from "./ui/ToggleThemeButton";
+import ToggleThemeButton from "./design/ToggleThemeButton";
 
 
 const Navbar = () => {

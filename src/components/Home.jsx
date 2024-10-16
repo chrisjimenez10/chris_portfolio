@@ -8,8 +8,8 @@ import { developerName } from "../constants";
 import { useContext } from "react";
 import { ThemeContext } from "../App";
 //UI
-import WordEffect from "./ui/WordEffect";
-import ParticlesContainer from "./ui/ParticlesContainer";
+import WordEffect from "./design/WordEffect";
+import ParticlesContainer from "./design/ParticlesContainer";
 
 
 const Home = () => {

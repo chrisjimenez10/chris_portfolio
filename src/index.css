@@ -14,7 +14,7 @@
     --green: 88, 212, 74;
   }
 
-  /* Dark Mode */
+  /* Dark Mode --> NOTE: [data-theme="dark"] is a class attribute with its value that we can assign to an element if we enclose it in brackets - Here, we are targeting the :root element and providing values when we attach this class attribute  */
   :root[data-theme="dark"] {
     color-scheme: dark;
     --textColor: 255, 255, 255;
@@ -42,7 +42,7 @@
   }
 
   .navStatic::after {
-    @apply content-[""] bg-primary h-[3px] w-[100%] left-0 top-[1.4rem] absolute rounded-xl
+    @apply content-[""] bg-contrastBg h-[3px] w-[100%] left-0 top-[1.4rem] absolute rounded-xl
   }
 
   .nav:hover::after {

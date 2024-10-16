@@ -4,7 +4,7 @@ import { useLocation } from "react-router-dom";
 import { developerName } from "../../constants";
 
 
-const HamburgerMenu = ({navTitles, navIcons, classNames, themeButton}) => {
+const HamburgerMenu = ({navTitles, navIcons, classNames, themeButton, style, colorVariants}) => {
 
   //Location
   const pathname = useLocation(null);
@@ -17,7 +17,7 @@ const HamburgerMenu = ({navTitles, navIcons, classNames, themeButton}) => {
         <h1 className="text-textColor text-xl sm:text-2xl flex">
           <span className="font-bold">{developerName.substring(0, 11)}</span>
           <span className="font-extralight"> {developerName.substring(12,20)}</span>
-          <span className="text-primary">{"."}</span>
+          <span className={`${colorVariants[style].text}`}>{"."}</span>
           <span className="translate-x-3">{themeButton}</span>
         </h1>
         <nav className="flex items-center justify-center gap-5">
@@ -52,7 +52,7 @@ const HamburgerMenu = ({navTitles, navIcons, classNames, themeButton}) => {
               </div>
 
               {/* Icon */}
-              <div className={`rounded-xl ${pathname.pathname === url ? "bg-primary" : "bg-black/85"} p-3 transition-all duration-300 hover:bg-primary`}>
+              <div className={`rounded-xl ${pathname.pathname === url ? colorVariants[style].bg : "bg-black/85"} p-3 transition-all duration-300 hover:${colorVariants[style].bg}`}>
                 {icon}
               </div>             
             </Link>

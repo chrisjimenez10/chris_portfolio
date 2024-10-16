@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 import { navTitles, navIcons } from "../constants";
 import ChangeStyle from "./ui/ChangeStyle";
+import { useContext } from "react";
+import { ThemeContext } from "../App";
 //Components
 import HamburgerMenu from "./ui/HamburgerMenu";
 //UI
@@ -10,6 +12,9 @@ import ToggleThemeButton from "./ui/ToggleThemeButton";
 
 
 const Navbar = () => {
+
+    //Context
+    const {style, colorVariants} = useContext(ThemeContext);
 
     //Location
     const pathname = useLocation(null);
@@ -46,7 +51,7 @@ const Navbar = () => {
       </div>
 
       {/* Mobile Device - Hamburger Menu */}
-      <HamburgerMenu navTitles={navTitles} navIcons={navIcons} classNames={`md:hidden`} themeButton={<ToggleThemeButton />}/>
+      <HamburgerMenu navTitles={navTitles} navIcons={navIcons} classNames={`md:hidden`} themeButton={<ToggleThemeButton />} style={style} colorVariants={colorVariants}/>
     </>
   )
 }

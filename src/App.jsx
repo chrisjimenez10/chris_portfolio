@@ -36,15 +36,15 @@ const App = () => {
   //Color Variants
   const colorVariants = {
     primary: {
-      bg: "bg-primary",
+      bg: "bg-primary hover:bg-primary",
       text: "text-primary hover:text-primary",
     },
     red: {
-      bg: "bg-red",
+      bg: "bg-red hover:bg-red",
       text: "text-red hover:text-red",
     },
     green: {
-      bg: "bg-green",
+      bg: "bg-green hover:bg-green",
       text: "text-green hover:text-green",
     },
   };

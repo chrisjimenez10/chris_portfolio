@@ -13,11 +13,11 @@ const Skills = () => {
     const titlesVariants = {
         initial: {
             opacity: 0,
-            y: "-50%",
+            x: "10%",
         },
         animate: {
             opacity: 1,
-            y: "0%",
+            x: "0%",
         }
     };
 

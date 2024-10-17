@@ -29,6 +29,11 @@ import wordpressIcon from "./svgs/wordpress.svg";
 //Tech Icons (UI/UX Design)
 import figmaIcon from "./svgs/figma.svg";
 import canvaIcon from "./svgs/canva.svg";
+//Projects Images
+import barbellFitnessImg from "./images/barbell_fitness_website.png";
+import brainwaveImg from "./images/brainwave_website.png";
+import pokemonImg from "./images/pokemon_storage_app.png";
+import wincookieImg from "./images/win_cookie_app.png";
 
 
 
@@ -56,5 +61,9 @@ export {
     wordpressIcon,
     figmaIcon,
     canvaIcon,
+    barbellFitnessImg,
+    brainwaveImg,
+    pokemonImg,
+    wincookieImg,
     
 };

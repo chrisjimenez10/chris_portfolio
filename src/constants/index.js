@@ -21,6 +21,10 @@ import {
     wordpressIcon,
     figmaIcon,
     canvaIcon,
+    barbellFitnessImg,
+    brainwaveImg,
+    pokemonImg,
+    wincookieImg,
 
 
 } from "../assets/index.js";
@@ -256,30 +260,30 @@ const projects = [
     {
         id: 1,
         title: "Brainwave",
-        image: "",
+        image: brainwaveImg,
         liveSite: "http://chrisjq-s3.s3-website.us-east-2.amazonaws.com/",
         gitHub: "https://github.com/chrisjimenez10/brainwave_project",
     },
     {
         id: 2,
         title: "Barbell Fitness",
-        image: "",
+        image: barbellFitnessImg,
         liveSite: "http://chrisjq2.s3-website.us-east-2.amazonaws.com/",
         gitHub: "https://github.com/chrisjimenez10/barbell_fitness",
     },
     {
         id: 3,
         title: "Pokemon Storage",
-        image: "",
-        liveSite: "",
-        gitHub: "",
+        image: pokemonImg,
+        liveSite: "http://3.17.166.207:3004/",
+        gitHub: "https://github.com/chrisjimenez10/pokemon-storage-app",
     },
     {
         id: 4,
         title: "Hit the Buzzer, Win a Cookie",
-        image: "",
-        liveSite: "",
-        gitHub: "",
+        image: wincookieImg,
+        liveSite: "https://chrisjimenez10.github.io/hit-the-buzzer-win-a-cookie-game/",
+        gitHub: "https://github.com/chrisjimenez10/hit-the-buzzer-win-a-cookie-game",
     },
 ];
 
@@ -292,5 +296,5 @@ export {
     uiuxDesign,
     experience,
     credentials,
-
+    projects
 };

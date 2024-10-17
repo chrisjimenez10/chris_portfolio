@@ -1,26 +1,32 @@
 //Imports
 import { useContext } from "react";
 import { ThemeContext } from "../App";
-//UI
+//Design
 import Section from "./design/Section";
+//UI
+import BentoGrid from "./ui/BentoGrid";
+import DevServices from "./ui/DevServices";
 
 const Projects = () => {
 
     //Context
     const {style, colorVariants} = useContext(ThemeContext);
 
+    //Props
+    const BentoProps = {
+      title: "Projects",
+      style,
+      colorVariants,
+    };
+
 
   return (
-    <Section id="projects" classNames="" padding="px-10">
-      <main className="flex flex-col items-center justify-center w-full">
-        <h1 className="">Projects</h1>
-        <div className="w-[800px] h-[700px] grid grid-cols-4 grid-rows-6 gap-3 p-1 m-5">
-          <div className="col-span-2 row-span-2 flex flex-col items-center justify-center bg-green rounded-2xl">1</div>
-          <div className="col-span-2 row-span-4 flex flex-col items-center justify-center bg-red rounded-2xl">2</div>
-          <div className="col-span-2 row-span-2 flex flex-col items-center justify-center bg-pink-400 rounded-2xl">3</div>
-          <div className="col-span-4 row-span-2 flex flex-col items-center justify-center bg-textAccent rounded-2xl">4</div>
-        </div>
-      </main>
+    <Section id="projects" classNames="flex flex-col items-center justify-center" padding="px-5 py-2">
+
+      <DevServices />
+    
+      <BentoGrid {...BentoProps}/>
+
     </Section>
   )
 }

@@ -44,18 +44,18 @@ const Home = () => {
           <a href="/Christopher_Jimenez_Resume.pdf" download="Christopher_Jimenez_Resume.pdf">
             <div className="bg-contrastBg rounded-md p-2 transition-colors hover:bg-background border border-contrastBg group cursor-pointer">
               <div className="group-hover:animate-pulse flex items-center justify-center gap-2">
-                <h1 className="text-sm md:text-xl font-semibold text-background group-hover:text-textColor">Resume</h1>
-                <RiFileDownloadLine size={20} className="text-background group-hover:text-textColor group-hover:skew-y-[25deg]"/>  
+                <h1 className={`text-sm md:text-xl font-semibold ${colorVariants[style].text}`}>Resume</h1>
+                <RiFileDownloadLine size={20} className={`text-background ${colorVariants[style].text} group-hover:skew-y-[25deg]`}/>  
               </div>                   
             </div>
           </a>
           <Link to="/contact">        
             <div className="bg-contrastBg p-2 rounded-md transition-colors hover:bg-background border border-contrastBg group cursor-pointer">
               <div className="group-hover:animate-pulse flex items-center justify-center gap-2">
-                <h1 className="text-sm md:text-xl font-semibold text-background group-hover:text-textColor">
+                <h1 className={`text-sm md:text-xl font-semibold ${colorVariants[style].text}`}>
                   Contact
                 </h1>
-                <FaLocationArrow size={20} className="text-background group-hover:text-textColor transition-all duration-300 group-hover:rotate-45"/>
+                <FaLocationArrow size={20} className={`${colorVariants[style].text} transition-all duration-300 group-hover:rotate-45`}/>
               </div>         
             </div>
           </Link> 

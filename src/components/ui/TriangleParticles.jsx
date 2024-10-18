@@ -2,8 +2,9 @@
 import { useEffect } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadFull } from "tsparticles";
-import { loadPolygonPath, polygonPathName } from "@tsparticles/path-polygon";
+import { loadPolygonPath } from "@tsparticles/path-polygon";
 
+//NOTE: Figure out HOW to add the effect of filled in space between links formed between particles (Like the DEMO at tsParticles Website)
 const TriangleParticles = ({classNames, theme, style}) => {
 
 //Initialize Engine
@@ -59,18 +60,22 @@ switch(style){
               opacity: 0.3,
               color: {
                 value: particleColor,
-              }
+              },
+              width: 2,
+              shape: {
+                type: "polygon",
+              },
             },
             shape: {
-              type: "circle"
+              type: "polygon"
             },
             opacity: {
               value: 0.8,
             },
             size: {
               value: {
-                min: 2,
-                max: 4,
+                min: 1,
+                max: 3,
               }
             },
             move: {
@@ -79,7 +84,7 @@ switch(style){
             }
           },
           poisson: {
-            enable: true
+            enable: true //Poisson property enables Poisson disk algorithm, which distributes particles generated evenly across a surface while keeping minimum distance between each point 
           },
     }}
     />

@@ -41,10 +41,8 @@ const Projects = () => {
     <Section id="projects" classNames="flex flex-col items-center justify-center gap-y-20" padding="px-5 py-2">
       <TriangleParticles {...TriangleParticlesProps}/>
       <DevServices {...DevServicesProps}/>
-
       <Cards {...CardsProps}/>
       <div className="h-[100px] md:hidden"></div>
-
     </Section>
   )
 }

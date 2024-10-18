@@ -40,7 +40,7 @@ const Cards = ({title, style, colorVariants, projects, margins}) => {
         <div className="flex flex-wrap items-center justify-center gap-x-16 gap-y-5 md:gap-y-8">
             {projects.map(({id, title, image, liveSite, gitHub, desc, tech})=>(
                 //Individual Containers (<div> with key={id})
-                <div key={id} className={`relative h-[28rem] sm:h-[36rem] lg:h-[38rem] flex flex-col items-start justify-start rounded-2xl transition-all hover:scale-[1.02] group`}>
+                <div key={id} className={`bg-background/85 relative h-[28rem] sm:h-[36rem] lg:h-[38rem] flex flex-col items-start justify-start rounded-2xl transition-all hover:scale-[1.02] group`}>
                     {/* NOTE: Example of how to create a border using a <div /> --> absolute to relative parent and inset-0 */}
                     <div className={`absolute inset-0 border-[.25rem] rounded-xl ${singleBorder} animate-pulse group-hover:animate-none ${solidBorder}`} style={{animationDuration: "1.2s"}}/>
                     <div className="relative flex items-center justify-center sm:w-[590px] w-[80vw] overflow-hidden sm:h-[35vh] h-[25vh] m-3 rounded-xl">
@@ -70,7 +70,7 @@ const Cards = ({title, style, colorVariants, projects, margins}) => {
                         </a>
                         <div className="h-[1.6rem] lg:h-[2rem] w-[2px] bg-contrastBg"/>
                         <a href={liveSite} target="_blank" className={`flex items-center justify-center gap-2 group-hover:animate-pulse ${colorVariants[style].text}`} style={{animationDuration: "1s"}}>
-                          <h1 className={`text-xl lg:text-2xl`}>Live Site</h1>
+                          <h1 className={`text-sm xs:text-xl lg:text-2xl`}>Live Site</h1>
                           <FaLocationArrow size={18} className="transition-all group-hover:rotate-45"/>
                         </a>
                       </div>

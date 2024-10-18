@@ -3,9 +3,6 @@ import { useEffect } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadFull } from "tsparticles";
 import { loadPolygonPath, polygonPathName } from "@tsparticles/path-polygon";
-import HexagonOptions from "../../assets/json/particles.json"; //We can use a JSON file for the "options" object (Exported from tsParticles website)
-
-
 
 const HexagonParticlesContainer = ({classNames, theme, style}) => {
 
@@ -43,7 +40,6 @@ return (
     className={`absolute w-full ${classNames || ""}`}
     id="hexagonparticles"
     particlesLoaded={particlesLoaded}
-    // options={HexagonOptions}
     options={{
         autoPlay: true,
         clear: true,
@@ -145,7 +141,7 @@ return (
             zIndex: -1
         },
         detectRetina: true,
-        duration: 0, //Duration of EFFECT
+        duration: 0, //Duration of EFFECT --> When set to 0, effect is infinite
         emitters: {
           direction: "none",
           rate: {

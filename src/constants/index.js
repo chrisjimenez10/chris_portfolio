@@ -432,5 +432,7 @@ export {
     uiuxDesign,
     experience,
     credentials,
-    projects
+    projects,
+    services,
+    
 };

@@ -1,6 +1,7 @@
 //Imports
 import { github } from "../../assets";
 import { FaLocationArrow } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 const Cards = ({title, style, colorVariants, projects, margins}) => {
 
@@ -29,6 +30,9 @@ const Cards = ({title, style, colorVariants, projects, margins}) => {
       solidBorder = "group-hover:border-contrastBg";
       bgGradient = "defaultGradient";
   };
+
+  //Animation Variants
+
 
   return (
     <div className={`flex flex-col items-center justify-center gap-y-8 ${margins || ""}`}>

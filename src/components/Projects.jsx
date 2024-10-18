@@ -5,7 +5,6 @@ import { projects } from "../constants";
 //Design
 import Section from "./design/Section";
 //UI
-import BentoGrid from "./ui/BentoGrid";
 import DevServices from "./ui/DevServices";
 import Cards from "./ui/Cards";
 
@@ -23,15 +22,20 @@ const Projects = () => {
 
     };
 
+    const DevServicesProps = {
+      title: "Services",
+      style,
+      colorVariants,
+      
+    };
+
 
   return (
-    <Section id="projects" classNames="flex flex-col items-center justify-center" padding="px-5 py-2">
+    <Section id="projects" classNames="flex flex-col items-center justify-center gap-y-8" padding="px-5 py-2">
 
-      <DevServices />
+      <DevServices {...DevServicesProps}/>
 
       <Cards {...CardsProps}/>
-
-      {/* <BentoGrid {...BentoProps}/> */}
 
     </Section>
   )

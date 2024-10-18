@@ -1,9 +1,9 @@
-import React from 'react'
+//Imports
 
-const DevServices = () => {
+const DevServices = ({title, style, colorVariants}) => {
   return (
     <div>
-      <h1>Services</h1>
+      <h1 className="text-4xl">Services</h1>
     </div>
   )
 }

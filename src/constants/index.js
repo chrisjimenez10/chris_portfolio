@@ -21,6 +21,14 @@ import {
     wordpressIcon,
     figmaIcon,
     canvaIcon,
+    barbellFitnessImg,
+    brainwaveImg,
+    pokemonImg,
+    wincookieImg,
+    awsTwoIcon,
+    expressjsIcon,
+    awsThreeIcon,
+    jqueryIcon,
 
 
 } from "../assets/index.js";
@@ -250,7 +258,149 @@ const credentials = [
         institution: "Rush University | Chicago, IL",
         date: "2019",
     },
-]
+];
+
+const projects = [
+    {
+        id: 1,
+        title: "Brainwave Webpage",
+        image: brainwaveImg,
+        desc: "BrainWave is a dynamic web application built using React, Tailwind CSS, and hosted on AWS. Showcasing responsive design and visually stunning cards with interactive elements.",
+        liveSite: "http://chrisjq-s3.s3-website.us-east-2.amazonaws.com/",
+        gitHub: "https://github.com/chrisjimenez10/brainwave_project",
+        tech: [
+            {
+                id: 1,
+                title: "JavaScript",
+                image: javascriptIcon,
+            },
+            {
+                id: 2,
+                title: "ReactJS",
+                image: reactIcon,
+            },
+            {
+                id: 3,
+                title: "TailwindCSS",
+                image: tailwindIcon,
+            },
+            {
+                id: 4,
+                title: "AWS",
+                image: awsTwoIcon,
+            },
+        ],
+    },
+    {
+        id: 2,
+        title: "Barbell Fitness - Website",
+        image: barbellFitnessImg,
+        desc: "The Barbell Fitness website is a strategic online presence designed to amplify the gym's outreach and credibility, driving business growth and attracting new clients. This responsive website showcases the gym's expertise, services, and unique value proposition.",
+        liveSite: "http://chrisjq2.s3-website.us-east-2.amazonaws.com/",
+        gitHub: "https://github.com/chrisjimenez10/barbell_fitness",
+        tech: [
+            {
+                id: 1,
+                title: "JavaScript",
+                image: javascriptIcon,
+            },
+            {
+                id: 2,
+                title: "ReactJS",
+                image: reactIcon,
+            },
+            {
+                id: 3,
+                title: "TailwindCSS",
+                image: tailwindIcon,
+            },
+            {
+                id: 4,
+                title: "FramerMotion",
+                image: framermotionIcon,
+            },
+            {
+                id: 5,
+                title: "AWS",
+                image: awsTwoIcon,
+            },
+        ],
+    },
+    {
+        id: 3,
+        title: "Pokemon Storage App",
+        image: pokemonImg,
+        desc: "The Pokémon Storage App is a full-stack web application designed to provide a secure and personalized storage solution for Pokémon enthusiasts. Leveraging JWT authentication, this React-based app ensures users' collections are protected and easily accessible.",
+        liveSite: "http://3.17.166.207:3004/",
+        gitHub: "https://github.com/chrisjimenez10/pokemon-storage-app",
+        tech: [
+            {
+                id: 1,
+                title: "NodeJS",
+                image: nodeJsIcon,
+                bgWhite: true,
+            },
+            {
+                id: 2,
+                title: "MongoDB",
+                image: mongoDbIcon,
+            },
+            {
+                id: 3,
+                title: "ExpressJS",
+                image: expressjsIcon,
+                bgWhite: true,
+            },
+            {
+                id: 4,
+                title: "ReactJS",
+                image: reactIcon,
+            },
+            {
+                id: 5,
+                title: "AWS",
+                image: awsThreeIcon,
+            },
+        ],
+    },
+    {
+        id: 4,
+        title: "Hit the Buzzer, Win a Cookie - Game",
+        image: wincookieImg,
+        desc: "Hit the Buzzer, Win a Cookie is a delightful web-based game designed to bring joy and excitement to players of all ages. Built using jQuery and deployed on GitHub Pages, this engaging game challenges users to click a buzzer to win a cookie and outscore Cookie Monster.",
+        liveSite: "https://chrisjimenez10.github.io/hit-the-buzzer-win-a-cookie-game/",
+        gitHub: "https://github.com/chrisjimenez10/hit-the-buzzer-win-a-cookie-game",
+        tech: [
+            {
+                id: 1,
+                title: "JavaScript",
+                image: javascriptIcon,
+            },
+            {
+                id: 2,
+                title: "jQuery",
+                image: jqueryIcon,
+                bgWhite: true,
+            },
+            {
+                id: 3,
+                title: "HTML",
+                image: htmlIcon,
+            },
+            {
+                id: 4,
+                title: "CSS",
+                image: cssIcon,
+            },
+            {
+                id: 5,
+                title: "GitHub",
+                image: github,
+                bgWhite: true,
+            },
+        ],
+    },
+];
 
 export {
     navTitles,
@@ -261,5 +411,5 @@ export {
     uiuxDesign,
     experience,
     credentials,
-
+    projects
 };

@@ -5,18 +5,22 @@ import { RiFileDownloadLine } from "react-icons/ri";
 import { FaLocationArrow } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { developerName } from "../constants";
+import { useContext } from "react";
+import { ThemeContext } from "../App";
 //UI
-import WordEffect from "./ui/WordEffect";
-import ParticlesContainer from "./ui/ParticlesContainer";
+import WordEffect from "./design/WordEffect";
+import ParticlesContainer from "./design/ParticlesContainer";
 
 
 const Home = () => {
 
+  //Context
+  const {style, colorVariants} = useContext(ThemeContext);
 
   return (
 
     <div className="flex flex-col space-y-7 sm:space-y-[3rem] items-center justify-center md:mt-[3.5rem] lg:mt-[9rem] lg:mx-5 lg:gap-7 lg:flex-row lg:justify-around">
-      <ParticlesContainer classNames="z-0"/>
+      <ParticlesContainer classNames="z-0" style={style}/>
 
       <div className="z-10 flex flex-col items-center justify-center gap-5">
         <div className="bg-contrastBg p-[2px] rounded-2xl shadow-shadow">
@@ -27,7 +31,7 @@ const Home = () => {
         <h1 className="hidden md:flex text-textColor text-2xl items-center justify-center">
           <span className="font-bold">{developerName.substring(0, 11)}</span>
           <span className="font-extralight"> {developerName.substring(12,20)}</span>
-          <span className="text-primary">{"."}</span>
+          <span className={`${colorVariants[style].text}`}>{"."}</span>
         </h1>
       </div>
 
@@ -40,18 +44,18 @@ const Home = () => {
           <a href="/Christopher_Jimenez_Resume.pdf" download="Christopher_Jimenez_Resume.pdf">
             <div className="bg-contrastBg rounded-md p-2 transition-colors hover:bg-background border border-contrastBg group cursor-pointer">
               <div className="group-hover:animate-pulse flex items-center justify-center gap-2">
-                <h1 className="text-sm md:text-xl font-semibold text-background group-hover:text-textColor">Resume</h1>
-                <RiFileDownloadLine size={20} className="text-background group-hover:text-textColor group-hover:skew-y-[25deg]"/>  
+                <h1 className={`text-sm md:text-xl font-semibold ${colorVariants[style].text}`}>Resume</h1>
+                <RiFileDownloadLine size={20} className={`text-background ${colorVariants[style].text} group-hover:skew-y-[25deg]`}/>  
               </div>                   
             </div>
           </a>
           <Link to="/contact">        
             <div className="bg-contrastBg p-2 rounded-md transition-colors hover:bg-background border border-contrastBg group cursor-pointer">
               <div className="group-hover:animate-pulse flex items-center justify-center gap-2">
-                <h1 className="text-sm md:text-xl font-semibold text-background group-hover:text-textColor">
+                <h1 className={`text-sm md:text-xl font-semibold ${colorVariants[style].text}`}>
                   Contact
                 </h1>
-                <FaLocationArrow size={20} className="text-background group-hover:text-textColor transition-all duration-300 group-hover:rotate-45"/>
+                <FaLocationArrow size={20} className={`${colorVariants[style].text} transition-all duration-300 group-hover:rotate-45`}/>
               </div>         
             </div>
           </Link> 

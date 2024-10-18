@@ -14,7 +14,7 @@
     --green: 88, 212, 74;
   }
 
-  /* Dark Mode */
+  /* Dark Mode --> NOTE: [data-theme="dark"] is a class attribute with its value that we can assign to an element if we enclose it in brackets - Here, we are targeting the :root element and providing values when we attach this class attribute  */
   :root[data-theme="dark"] {
     color-scheme: dark;
     --textColor: 255, 255, 255;
@@ -42,11 +42,34 @@
   }
 
   .navStatic::after {
-    @apply content-[""] bg-primary h-[3px] w-[100%] left-0 top-[1.4rem] absolute rounded-xl
+    @apply content-[""] bg-contrastBg h-[3px] w-[100%] left-0 top-[1.4rem] absolute rounded-xl
   }
 
   .nav:hover::after {
     @apply w-[100%]
   }
+
+  /* Backgorund Gradients for Cards */
+  .blueGradient {
+    background: rgb(52,83,154);
+    background: linear-gradient(131deg, rgba(52,83,154,1) 1%, rgba(85,136,255,1) 33%, rgba(245,246,250,1) 100%);
+  }
+
+  .redGradient {
+    background: rgb(233,28,28);
+    background: linear-gradient(131deg, rgba(233,28,28,1) 1%, rgba(218,106,97,1) 39%, rgba(249,224,227,1) 100%);
+  }
+
+  .greenGradient {
+    background: rgb(57,136,48);
+    background: linear-gradient(131deg, rgba(57,136,48,1) 1%, rgba(88,212,74,1) 29%, rgba(236,249,234,1) 94%);
+  }
+
+  .defaultGradient {
+    background: rgb(16,16,17);
+    background: linear-gradient(131deg, rgba(16,16,17,1) 1%, rgba(105,105,108,1) 40%, rgba(255,255,255,1) 100%);
+  }
 }
+
+
 

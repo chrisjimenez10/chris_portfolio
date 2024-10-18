@@ -7,7 +7,7 @@ import HexagonOptions from "../../assets/json/particles.json"; //We can use a JS
 
 
 
-const HexagonParticlesContainer = ({classNames, theme}) => {
+const HexagonParticlesContainer = ({classNames, theme, style}) => {
 
     //Initialize Engine
     useEffect(()=>{
@@ -20,6 +20,22 @@ const HexagonParticlesContainer = ({classNames, theme}) => {
 
     const particlesLoaded = (container) => {
         console.log(container);
+    };
+
+    //Match particle color with currently selected style
+    let particleColor = "";
+    switch(style){
+        case "primary":
+            particleColor = "#0047AB";
+            break;
+        case "red":
+            particleColor = "#c73424";
+            break;
+        case "green":
+            particleColor = "#58d44a";
+            break;
+        default:
+            particleColor = "#f069cc"; //Pink
     };
 
 return (
@@ -35,7 +51,7 @@ return (
         fpsLimit: 120,
         particles: {
           color: {
-            value: "#0047AB", //Style --> Dynamic color change
+            value: particleColor, //Style --> Dynamic color change
             animation: {
               enable: true,
               speed: 1

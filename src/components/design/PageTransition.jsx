@@ -22,11 +22,11 @@ const PageTransition = ({children}) => {
       break;
     case "red":
       secondDiv = "bg-[#fc7c62]";
-      thirdDiv = "bg-[#751a14]";
+      thirdDiv = "bg-[#9c2422]";
       break;
     case "green":
       secondDiv = "bg-[#8aed68]";
-      thirdDiv = "bg-[#1b6310]";
+      thirdDiv = "bg-[#2cb327]";
       break;
   };
 

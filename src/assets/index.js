@@ -14,10 +14,13 @@ import mongoDbIcon from "./svgs/mongodb.svg";
 import nodeJsIcon from "./svgs/nodejs.svg";
 import postgreSqlIcon from "./svgs/postgresql.svg";
 import pythonIcon from "./svgs/python.svg";
+import expressjsIcon from "./svgs/expressjs.svg";
 //Tech Icons (DevOps)
 import awsIcon from "./svgs/aws.svg";
 import dockerIcon from "./svgs/docker.svg";
 import terraformIcon from "./svgs/terraform.svg";
+import awsTwoIcon from "./svgs/aws_two.svg";
+import awsThreeIcon from "./svgs/aws_three.svg";
 //Tech Icons (Web Development)
 import cssIcon from "./svgs/css.svg";
 import framermotionIcon from "./svgs/framermotion.svg";
@@ -26,6 +29,7 @@ import javascriptIcon from "./svgs/javascript.svg";
 import reactIcon from "./svgs/react.svg";
 import tailwindIcon from "./svgs/tailwind.svg";
 import wordpressIcon from "./svgs/wordpress.svg";
+import jqueryIcon from "./svgs/jquery.svg";
 //Tech Icons (UI/UX Design)
 import figmaIcon from "./svgs/figma.svg";
 import canvaIcon from "./svgs/canva.svg";
@@ -49,7 +53,10 @@ export {
     nodeJsIcon,
     postgreSqlIcon,
     pythonIcon,
+    expressjsIcon,
     awsIcon,
+    awsTwoIcon,
+    awsThreeIcon,
     dockerIcon,
     terraformIcon,
     cssIcon,
@@ -65,5 +72,6 @@ export {
     brainwaveImg,
     pokemonImg,
     wincookieImg,
+    jqueryIcon,
     
 };

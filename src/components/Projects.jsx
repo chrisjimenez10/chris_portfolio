@@ -25,8 +25,7 @@ const Projects = () => {
     const DevServicesProps = {
       title: "Services",
       style,
-      colorVariants,
-      
+      colorVariants,      
     };
 
 
@@ -36,6 +35,7 @@ const Projects = () => {
       <DevServices {...DevServicesProps}/>
 
       <Cards {...CardsProps}/>
+      <div className="h-[100px] md:hidden"></div>
 
     </Section>
   )

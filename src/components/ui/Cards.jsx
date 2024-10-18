@@ -2,7 +2,7 @@
 import { github } from "../../assets";
 import { FaLocationArrow } from "react-icons/fa";
 
-const Cards = ({title, style, colorVariants, projects}) => {
+const Cards = ({title, style, colorVariants, projects, margins}) => {
 
 //Border Style + Background Gradient for Cards --> Using CSS Classes created in @layer utilities
   let singleBorder = "";
@@ -31,7 +31,7 @@ const Cards = ({title, style, colorVariants, projects}) => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center gap-y-8">
+    <div className={`flex flex-col items-center justify-center gap-y-8 ${margins || ""}`}>
         <h1 className="text-4xl">{title}</h1>
         <div className="flex flex-wrap items-center justify-center gap-x-16 gap-y-5 md:gap-y-8">
             {projects.map(({id, title, image, liveSite, gitHub, desc, tech})=>(

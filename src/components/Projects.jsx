@@ -19,7 +19,7 @@ const Projects = () => {
       style,
       colorVariants,
       projects,
-
+      margins: "",
     };
 
     const DevServicesProps = {

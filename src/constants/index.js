@@ -402,6 +402,27 @@ const projects = [
     },
 ];
 
+const services = [
+    {
+        id: 1,
+        topTitle: "Phase 1",
+        botTitle: "Planning | Design",
+
+    },
+    {
+        id: 2,
+        topTitle: "Phase 2",
+        botTitle: "Development | Testing",
+
+    },
+    {
+        id: 3,
+        topTitle: "Phase 3",
+        botTitle: "Deployment | Maintenance",
+
+    },
+];
+
 export {
     navTitles,
     navIcons,

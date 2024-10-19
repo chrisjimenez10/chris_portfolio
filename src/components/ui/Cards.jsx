@@ -1,7 +1,6 @@
 //Imports
 import { github } from "../../assets";
 import { FaLocationArrow } from "react-icons/fa";
-import { motion } from "framer-motion";
 
 const Cards = ({title, style, colorVariants, projects, margins}) => {
 
@@ -31,12 +30,14 @@ const Cards = ({title, style, colorVariants, projects, margins}) => {
       bgGradient = "defaultGradient";
   };
 
-  //Animation Variants
-
 
   return (
     <div className={`flex flex-col items-center justify-center gap-y-8 ${margins || ""}`}>
-        <h1 className="text-4xl">{title}</h1>
+        <h1 className="text-4xl">
+          <span className="text-textColor font-normal">{title.substring(0, 6)}</span>
+          <span className="text-textColor font-bold">{title.substring(6, 15)}</span>
+          <span className={`${colorVariants[style].text} font-bold`}>.</span>
+        </h1>
         <div className="flex flex-wrap items-center justify-center gap-x-16 gap-y-5 md:gap-y-8">
             {projects.map(({id, title, image, liveSite, gitHub, desc, tech})=>(
                 //Individual Containers (<div> with key={id})

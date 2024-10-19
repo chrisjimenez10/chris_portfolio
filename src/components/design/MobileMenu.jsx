@@ -2,25 +2,30 @@
 import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 import { developerName } from "../../constants";
+//UI
 
 
-const HamburgerMenu = ({navTitles, navIcons, classNames, themeButton, style, colorVariants}) => {
+
+const MobileMenu = ({navTitles, navIcons, classNames, themeButton, style, colorVariants, HamburgerIcon}) => {
 
   //Location
   const pathname = useLocation(null);
 
 
   return (
-    <div className={`${classNames || ""} `}>
-
-      <div className="flex flex-col items-center justify-center space-y-2 w-full relative top-2 z-10">
+    <div className={`${classNames || ""} mt-2`}>      
+      <div className="flex flex-col items-center justify-center space-y-5 w-full relative top-2 z-50">
         <h1 className="text-textColor text-xl sm:text-2xl flex">
           <span className="font-bold">{developerName.substring(0, 11)}</span>
           <span className="font-extralight"> {developerName.substring(12,20)}</span>
           <span className={`${colorVariants[style].text}`}>{"."}</span>
           <span className="translate-x-3">{themeButton}</span>
         </h1>
-        <nav className="flex items-center justify-center gap-5">
+        <div className="fixed left-5 top-10">
+          {HamburgerIcon}
+        </div>
+
+        {/* <nav className="flex items-center justify-center gap-5">
           {navIcons.map(({id, image, title, url})=>(
                 <div key={id} className="cursor-pointer transition-transform duration-200 hover:-translate-y-1 bg-white/95 rounded-full border-surface/75 border-[2px] p-1">
                   <a href={url} target={"_blank"}>
@@ -28,7 +33,8 @@ const HamburgerMenu = ({navTitles, navIcons, classNames, themeButton, style, col
                   </a>
                 </div>
               ))}
-        </nav>
+        </nav> */}
+      
       </div>
 
 
@@ -64,4 +70,4 @@ const HamburgerMenu = ({navTitles, navIcons, classNames, themeButton, style, col
   )
 }
 
-export default HamburgerMenu;
+export default MobileMenu;

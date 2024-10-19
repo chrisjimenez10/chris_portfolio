@@ -59,8 +59,8 @@ const navTitles = [
     },
     {
         id: 3,
-        title: "Projects",
-        url: "/projects",
+        title: "Services",
+        url: "/services",
         icon: React.createElement(GoProjectRoadmap, {size: 30, color: "white"}),
         desktop: true,
     },
@@ -265,7 +265,7 @@ const projects = [
         id: 1,
         title: "Brainwave Webpage",
         image: brainwaveImg,
-        desc: "BrainWave is a dynamic web application built using React, Tailwind CSS, and hosted on AWS. Showcasing responsive design and visually stunning cards with interactive elements.",
+        desc: "Brainwave is a dynamic web application built using React, Tailwind CSS, and hosted on AWS. Showcasing responsive design and visually stunning cards with interactive elements.",
         liveSite: "http://chrisjq-s3.s3-website.us-east-2.amazonaws.com/",
         gitHub: "https://github.com/chrisjimenez10/brainwave_project",
         tech: [

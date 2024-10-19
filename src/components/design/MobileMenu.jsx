@@ -24,19 +24,7 @@ const MobileMenu = ({navTitles, navIcons, classNames, themeButton, style, colorV
         <div className="fixed left-5 top-10">
           {HamburgerIcon}
         </div>
-
-        {/* <nav className="flex items-center justify-center gap-5">
-          {navIcons.map(({id, image, title, url})=>(
-                <div key={id} className="cursor-pointer transition-transform duration-200 hover:-translate-y-1 bg-white/95 rounded-full border-surface/75 border-[2px] p-1">
-                  <a href={url} target={"_blank"}>
-                    <img src={image} alt={title} width={14} height={14} />
-                  </a>
-                </div>
-              ))}
-        </nav> */}
-      
       </div>
-
 
       <div className={`fixed w-full left-0 bottom-0 h-[80px] flex items-center justify-center bg-surface/45 backdrop-blur-sm z-50`}>
         <nav className="flex gap-4 sm:gap-10">

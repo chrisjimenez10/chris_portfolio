@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import ChangeStyle from "../design/ChangeStyle";
 
 
-const HamburgerMenu = ({isOpen, style, classNames}) => {
+const HamburgerMenu = ({isOpen, style, classNames, navIcons}) => {
 
   //Animation Variants
   const revealVariants = {
@@ -38,9 +38,22 @@ const HamburgerMenu = ({isOpen, style, classNames}) => {
     variants={revealVariants}
     animate={isOpen ? "open" : "closed"}
     transition={{duration: 0.3, ease: "easeInOut"}}
-    className={`z-40 fixed left-0 ${classNames || "top-5"} h-[40rem] w-[20rem] rounded-e-xl bg-background border-e border-b border-t ${singleBorder} flex flex-col items-center justify-center`}
+    className={`z-40 fixed left-0 ${classNames || "top-5"} h-[40rem] w-[20rem] rounded-e-xl bg-background border-e border-b border-t ${singleBorder} flex flex-col items-start justify-around`}
     >
       <ChangeStyle />
+      <div className="flex flex-col gap-y-5">
+        <h1 className="border-b">Socials</h1>
+        <div className="flex gap-5">
+          {navIcons.map(({id, image, title, url})=>(
+            <div key={id} className="cursor-pointer transition-transform duration-200 hover:scale-110 bg-white rounded-full p-1 border-[2px] border-background">
+              <a href={url} target={"_blank"}>
+                <img src={image} alt={title} width={30} height={30} />
+              </a>
+            </div>
+          ))}
+        </div>
+      </div>
+      
     </motion.nav>
   )
 }

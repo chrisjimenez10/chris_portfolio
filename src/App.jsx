@@ -8,7 +8,7 @@ import Home from "./components/Home";
 import Loader from "./components/design/Loader";
 //Lazy Loading
 const About = lazy(()=>import("./components/About"));
-const Projects = lazy(()=>import("./components/Projects"));
+const Services = lazy(()=>import("./components/Services"));
 const Community = lazy(()=>import("./components/Community"));
 const Contact = lazy(()=>import("./components/Contact"));
 const Error = lazy(()=>import("./components/Error"));
@@ -57,7 +57,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
-          <Route path="/projects" element={<Projects />} />
+          <Route path="/services" element={<Services />} />
           <Route path="/community" element={<Community />} />
           <Route path="/contact" element={<Contact />} />
 

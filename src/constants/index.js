@@ -59,8 +59,8 @@ const navTitles = [
     },
     {
         id: 3,
-        title: "Projects",
-        url: "/projects",
+        title: "Services",
+        url: "/services",
         icon: React.createElement(GoProjectRoadmap, {size: 30, color: "white"}),
         desktop: true,
     },

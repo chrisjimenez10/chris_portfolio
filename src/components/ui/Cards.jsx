@@ -30,11 +30,9 @@ const Cards = ({title, style, colorVariants, projects, margins}) => {
       bgGradient = "defaultGradient";
   };
 
-  //Animation Variants
-
 
   return (
-    <div className={`flex flex-col items-center justify-center gap-y-8 z-10 ${margins || ""}`}>
+    <div className={`flex flex-col items-center justify-center gap-y-8 ${margins || ""}`}>
         <h1 className="text-4xl">
           <span className="text-textColor font-normal">{title.substring(0, 6)}</span>
           <span className="text-textColor font-bold">{title.substring(6, 15)}</span>

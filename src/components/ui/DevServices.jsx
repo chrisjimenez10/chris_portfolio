@@ -16,8 +16,7 @@ const DevServices = ({title, style, colorVariants, services}) => {
       y: "-100%",
     }
   };
-
-
+      
   let bgGradient = "";
   let singleBorder = "";
   switch(style){
@@ -41,7 +40,7 @@ const DevServices = ({title, style, colorVariants, services}) => {
 
   return (
     // Flex-Row Services container for 2xl+ screen size - Carousel for screen sizes smaller than 2xl
-    <div className="hidden 2xl:flex flex-col items-center justify-center gap-y-8 z-10">
+    <div className="hidden 2xl:flex flex-col items-center justify-center gap-y-8">
       <h1 className="text-4xl text-textColor font-bold">
         <span className="font-normal">{title.substring(0, 2)}</span>
         <span className="font-bold">{title.substring(2, 11)}</span>

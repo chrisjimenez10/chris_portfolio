@@ -62,7 +62,7 @@ const About = () => {
 
 
   return (
-    <Section id="about" classNames="md:mt-[7.8rem] 2xl:mt-[12rem] overflow-hidden">
+    <Section id="about" classNames="mt-8 md:mt-[7.8rem] 2xl:mt-[12rem] overflow-hidden">
       <HexagonParticlesContainer classNames="z-0" theme={theme} style={style}/>
       <div className="flex flex-col items-center justify-center p-5 gap-5 xl:flex-row xl:justify-around">
 

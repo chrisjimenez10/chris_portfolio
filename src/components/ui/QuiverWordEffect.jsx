@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 
 
 const QuiverWordEffect = ({phrase, classNames, style, colorVariants}) => {
-    console.log(style, colorVariants)
 
     //Animation Variants
     const DURATION = 0.25;

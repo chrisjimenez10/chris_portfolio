@@ -1,5 +1,4 @@
 //Imports
-import { useState } from "react";
 import { motion } from "framer-motion";
 
 //Path Component --> NOTE: This is the component that will compose each SVG and allow for transformation of SVG Shape
@@ -8,14 +7,13 @@ const Path = (props) => (
     fill="transparent"
     strokeWidth="3"
     strokeLinecap="round"
+    color="#fff"
     {...props}
     />
 );
 
-const HamburgerIcon = ({classNames}) => {
-
-    //State
-    const [isOpen, setIsOpen] = useState(false);
+const HamburgerIcon = ({classNames, isOpen, setIsOpen, theme}) => {
+    console.log(theme)
 
     // Animation Variants
     const topVariants = {
@@ -48,28 +46,32 @@ const HamburgerIcon = ({classNames}) => {
         }
     };
 
+
   return (
     <div onClick={()=> setIsOpen(isOpen ? false : true)} className={`${classNames || ""} cursor-pointer`}>
         <svg width="23" height="23" viewBox="0 0 23 23" >
             <Path               
             variants={topVariants}
+            initial="closed"
             animate={isOpen ? "open" : "closed"}
             transition={{ duration: 0.3 }}
-            stroke="#ffffff" //Dynamic change with switch statement         
+            stroke={theme === "dark" ? "white" : "black"}//Dynamic change with switch statement         
             />
             <Path
             variants={middleVariants}
+            initial="closed"
             animate={isOpen ? "open" : "closed"}
             transition={{ duration: 0.1 }}
             d="M 2 9.423 L 20 9.423"
-            stroke="#ffffff"               
+            stroke={theme === "dark" ? "white" : "black"}              
 
             />
             <Path
             variants={bottomVariants}
+            initial="closed"
             animate={isOpen ? "open" : "closed"}
             transition={{ duration: 0.3 }}
-            stroke="#ffffff"               
+            stroke={theme === "dark" ? "white" : "black"}             
 
             />
         </svg>

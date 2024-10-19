@@ -1,11 +1,14 @@
 //Imports
 import { motion } from "framer-motion";
 import { useState } from "react";
+//Design
+import ChangeStyle from "../design/ChangeStyle";
+
+
 
 const ColorStyleNav = () => {
 
-    //State
-    const [isOpen, setIsOpen] = useState(false);
+    
 
     //Animation Variants
     const revealVariants = {
@@ -19,17 +22,19 @@ const ColorStyleNav = () => {
         },
     };
 
+
   return (
     <>
-        <button onClick={()=> setIsOpen(isOpen ? false : true)}>
-           COLOR
-        </button>
+
+        
+
         <motion.nav
         variants={revealVariants}
         animate={isOpen ? "open" : "closed"}
-        className="fixed left-0 top-[10rem]"
+        transition={{duration: 0.3, ease: "easeInOut"}}
+        className="fixed left-0 top-0 h-full w-[20rem] bg-contrastBg z-50"
         >
-            <div className="h-[20rem] w-[20rem] bg-contrastBg"></div>
+          <ChangeStyle />
         </motion.nav>
     </>
     

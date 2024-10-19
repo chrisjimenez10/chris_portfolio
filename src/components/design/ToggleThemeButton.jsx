@@ -6,7 +6,7 @@ import { BsMoonStarsFill } from "react-icons/bs";
 import { motion } from "framer-motion";
 
 
-const ToggleThemeButton = () => {
+const ToggleThemeButton = ({classNames}) => {
 
   //Context (Global State - Theme)
   const {theme, setTheme} = useContext(ThemeContext);
@@ -38,7 +38,7 @@ const ToggleThemeButton = () => {
 
 
   return (
-    <div className={`${icon === "sun" ? "bg-black" : "bg-white"} rounded-full w-8 h-8 cursor-pointer`} onClick={handleIconToggle}>       
+    <div className={`${icon === "sun" ? "bg-black" : "bg-white"} ${classNames || ""} rounded-full w-8 h-8 cursor-pointer`} onClick={handleIconToggle}>       
           <motion.div
             variants={transitionVariants}
             initial="initial"
@@ -56,7 +56,7 @@ const ToggleThemeButton = () => {
           transition={{duration: 0.5, ease: "easeInOut"}}
           className="relative bottom-[1rem] left-[.35rem]"
           >
-            <BsMoonStarsFill size={19} color="white" className="animate-pulse" style={{animationDuration: "5s"}}/>
+            <BsMoonStarsFill size={20} color="white" className="animate-pulse" style={{animationDuration: "5s"}}/>
           </motion.div>
     </div>
 

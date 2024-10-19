@@ -1,17 +1,22 @@
 //Imports
-import { keyframes, motion } from "framer-motion";
+import { motion } from "framer-motion";
+//UI
+import QuiverWordEffect from "./QuiverWordEffect";
 
 const DevServices = ({title, style, colorVariants, services}) => {
 
   //Animation Variants
   const slideCoverVariants = {
     initial: {
-      x: "-0%",
+      // x: "-0%",
+      y: "0%",
     },
     animate: {
-      x: "-100%",
+      // x: "-100%",
+      y: "-100%",
     }
   };
+
 
   let bgGradient = "";
   let singleBorder = "";
@@ -33,6 +38,7 @@ const DevServices = ({title, style, colorVariants, services}) => {
       singleBorder = "border-defaultGradient/45";
   };
 
+
   return (
     // Flex-Row Services container for 2xl+ screen size - Carousel for screen sizes smaller than 2xl
     <div className="hidden 2xl:flex flex-col items-center justify-center gap-y-8 z-10">
@@ -47,21 +53,23 @@ const DevServices = ({title, style, colorVariants, services}) => {
           // {/* Hover reveal effect card container */}
           <motion.div
           key={id} 
-          className={`relative bg-background/85 h-full w-[28rem] flex flex-col items-center justify-center cursor-pointer overflow-hidden border ${singleBorder}`}
+          className={`relative bg-background/85 h-full w-[28rem] flex flex-col items-center justify-center cursor-pointer overflow-hidden border ${singleBorder}`}         
           initial="initial"
           whileHover="animate"
           transition={{delayChildren: 0, staggerChildren: .02}}
           >
             {/* Card TOP */}
             <motion.div 
-            className={`absolute inset-0 flex flex-col items-center justify-center ${bgGradient} overflow-hidden rounded-xl`}
+            className={`absolute inset-0 flex flex-col items-center justify-center ${bgGradient} overflow-hidden rounded-xl z-10`}
             variants={slideCoverVariants}
             transition={{duration: 0.7}}
             >
               <h1 className="text-textColor text-2xl font-semibold">{topTitle}</h1>
             </motion.div>
             {/* Card BOTTOM --> Card is actually the parent container card */}
-            <h1 className="2xl:text-3xl font-semibold text-textColor">{botTitle}</h1>
+            <h1 className="2xl:text-3xl font-semibold text-textColor">
+              <QuiverWordEffect phrase={botTitle} classNames="z-0" style={style} colorVariants={colorVariants}/>
+            </h1>
           </motion.div>
         ))}        
       </div>

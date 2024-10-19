@@ -1,7 +1,6 @@
 //Imports
 import { github } from "../../assets";
 import { FaLocationArrow } from "react-icons/fa";
-import { motion } from "framer-motion";
 
 const Cards = ({title, style, colorVariants, projects, margins}) => {
 

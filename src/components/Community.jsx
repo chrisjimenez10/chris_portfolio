@@ -7,7 +7,7 @@ import ColorStyleNav from "./ui/ColorStyleNav";
 const Community = () => {
   return (
     <Section id="community">
-      <div className="flex items-center justify-center">
+      <div className="flex flex-col items-center justify-center">
         <h1 className="text-textColor text-2xl">Community</h1>
         <ColorStyleNav />
       </div>

@@ -35,8 +35,12 @@ const DevServices = ({title, style, colorVariants, services}) => {
 
   return (
     // Flex-Row Services container for 2xl+ screen size - Carousel for screen sizes smaller than 2xl
-    <div className="hidden 2xl:flex flex-col items-center justify-center gap-y-8">
-      <h1 className="text-4xl">{title}</h1>
+    <div className="hidden 2xl:flex flex-col items-center justify-center gap-y-8 z-10">
+      <h1 className="text-4xl text-textColor font-bold">
+        <span className="font-normal">{title.substring(0, 2)}</span>
+        <span className="font-bold">{title.substring(2, 11)}</span>
+        <span className={`${colorVariants[style].text} font-bold`}>.</span>
+      </h1>
 
       <div className={`relative [&>div]:rounded-xl flex items-center justify-center gap-x-8 h-[25rem]`}>
         {services.map(({id, topTitle, botTitle})=>(

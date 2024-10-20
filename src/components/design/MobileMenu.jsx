@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
 //UI
 import HamburgerIcon from "../ui/HamburgerIcon";
 
-const MobileMenu = ({navTitles, navIcons, classNames, themeButton, style, colorVariants, isOpen, setIsOpen, theme}) => {
+const MobileMenu = ({navTitles, classNames, themeButton, style, colorVariants, isOpen, setIsOpen, theme}) => {
 
   //Location
   const pathname = useLocation(null);

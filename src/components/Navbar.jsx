@@ -60,7 +60,7 @@ const Navbar = () => {
 
       {/* Mobile Device Menu --> Rendering HamburgerMenu again because it is HIDDEN in mobile screens*/}
       <HamburgerMenu {...MobileHamburgerMenuProps}/>
-      <MobileMenu navTitles={navTitles} navIcons={navIcons} classNames={`md:hidden`} themeButton={<ToggleThemeButton />} style={style} colorVariants={colorVariants}  isOpen={isOpen} setIsOpen={setIsOpen} theme={theme} />
+      <MobileMenu navTitles={navTitles} classNames={`md:hidden`} themeButton={<ToggleThemeButton />} style={style} colorVariants={colorVariants}  isOpen={isOpen} setIsOpen={setIsOpen} theme={theme} />
     </>
   )
 }

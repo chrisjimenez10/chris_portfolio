@@ -38,9 +38,11 @@ const HamburgerMenu = ({isOpen, style, classNames, navIcons}) => {
     variants={revealVariants}
     animate={isOpen ? "open" : "closed"}
     transition={{duration: 0.3, ease: "easeInOut"}}
-    className={`z-40 fixed left-0 ${classNames || "top-5"} h-[40rem] w-[20rem] rounded-e-xl bg-background border-e border-b border-t ${singleBorder} flex flex-col items-start justify-around`}
+    className={`z-40 fixed left-0 ${classNames || "top-5 h-[40rem] w-[20rem]"} rounded-e-xl bg-background border-e border-b border-t ${singleBorder} flex flex-col items-start justify-around`}
     >
+
       <ChangeStyle />
+
       <div className="flex flex-col gap-y-5">
         <h1 className="border-b">Socials</h1>
         <div className="flex gap-5">

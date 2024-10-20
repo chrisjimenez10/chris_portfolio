@@ -18,9 +18,10 @@ const ChangeStyle = () => {
         <h1 className="text-lg">Style</h1>
         <div className="h-[0.05rem] w-full bg-contrastBg" />
         <div className="flex gap-5 mt-3">
-            <FaDroplet onClick={()=> setStyle("primary")} className={`${colorVariants["primary"].text} cursor-pointer`} size={28}/>
-            <FaDroplet onClick={()=> setStyle("red")} className={`${colorVariants["red"].text} cursor-pointer`} size={28}/>
-            <FaDroplet onClick={()=> setStyle("green")} className={`${colorVariants["green"].text} cursor-pointer`} size={28}/>
+            <FaDroplet onClick={()=> setStyle("primary")} className={`${colorVariants["primary"].text} cursor-pointer transition-all hover:scale-110`} size={28}/>
+            <FaDroplet onClick={()=> setStyle("red")} className={`${colorVariants["red"].text} cursor-pointer transition-all hover:scale-110`} size={28}/>
+            <FaDroplet onClick={()=> setStyle("green")} className={`${colorVariants["green"].text} cursor-pointer transition-all hover:scale-110`} size={28}/>
+            <FaDroplet onClick={()=> setStyle("purple")} className={`${colorVariants["purple"].text} cursor-pointer transition-all hover:scale-110`} size={28}/>
         </div>
     </div>
   )

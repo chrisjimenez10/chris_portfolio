@@ -47,6 +47,10 @@ const App = () => {
       bg: "bg-green hover:bg-green",
       text: "text-green hover:text-green",
     },
+    purple: {
+      bg: "bg-purple hover:bg-purple",
+      text: "text-purple hover:text-purple",
+    }
   };
 
   return (

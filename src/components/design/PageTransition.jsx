@@ -27,6 +27,7 @@ const PageTransition = ({children}) => {
     case "green":
       secondDiv = "bg-[#8aed68]";
       thirdDiv = "bg-[#2cb327]";
+      break;
     case "purple":
       secondDiv = "bg-[#f571ec]";
       thirdDiv = "bg-[#ad1da4]";

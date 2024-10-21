@@ -44,7 +44,7 @@ const HamburgerMenu = ({isOpen, style, classNames, navIcons}) => {
     className={`z-40 fixed left-0 ${classNames || "top-5 h-[40rem] w-[20rem]"} rounded-e-xl bg-background border-e border-b border-t ${singleBorder} flex flex-col items-start justify-around px-5`}
     >
 
-      <div className="flex flex-col">
+      <div className="flex flex-col md:ml-5">
         <h1 className="text-lg">Socials</h1>
         <div className="h-[0.05rem] w-full bg-contrastBg" />
         <div className="flex gap-5 mt-3">

@@ -49,7 +49,7 @@ const Navbar = () => {
            return(
             <div key={id}>
               <Link to={url} className={`relative ${pathname.pathname === url ? "navStatic": ""}`}>
-                <span className="relative text-textColor nav">{title}</span>
+                <span className={`relative nav ${pathname.pathname === url ? colorVariants[style].text : "text-textColor"}`}>{title}</span>
               </Link>
             </div>
            )

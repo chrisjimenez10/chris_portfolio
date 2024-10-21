@@ -14,7 +14,7 @@ const ChangeStyle = () => {
 
 
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col md:ml-5">
         <h1 className="text-lg">Style</h1>
         <div className="h-[0.05rem] w-full bg-contrastBg" />
         <div className="flex gap-5 mt-3">

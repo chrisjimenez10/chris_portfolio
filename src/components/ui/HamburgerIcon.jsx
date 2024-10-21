@@ -1,6 +1,7 @@
 //Imports
 import { motion } from "framer-motion";
 
+
 //Path Component --> NOTE: This is the component that will compose each SVG and allow for transformation of SVG Shape
 const Path = (props) => (
     <motion.path
@@ -13,7 +14,7 @@ const Path = (props) => (
 );
 
 const HamburgerIcon = ({classNames, isOpen, setIsOpen, theme}) => {
-    console.log(theme)
+    
 
     // Animation Variants
     const topVariants = {

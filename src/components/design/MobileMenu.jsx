@@ -2,28 +2,53 @@
 import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 import { developerName } from "../../constants";
+import {disablePageScroll, enablePageScroll} from "scroll-lock";
+import { useEffect, useState } from "react";
 //UI
+import HamburgerIcon from "../ui/HamburgerIcon";
 
-
-
-const MobileMenu = ({navTitles, navIcons, classNames, themeButton, style, colorVariants, HamburgerIcon}) => {
+const MobileMenu = ({navTitles, classNames, themeButton, style, colorVariants, isOpen, setIsOpen, theme}) => {
 
   //Location
   const pathname = useLocation(null);
+  
+  //Screen size
+  const [screenSize, setScreenSize] = useState(window.innerWidth);
+  useEffect(()=>{
+    // To track and reassign the screenSize value we need to use the event listener inside a useEffect()
+    window.addEventListener("resize", ()=>{
+      setScreenSize(window.innerWidth);
+    });
+    // After we resize and reassign the current screen size value, we can remove the event listener to reset it when we have to add it again to re-calculate
+    return ()=> {
+      window.removeEventListener("resize", ()=>{
+        setScreenSize(window.innerWidth);
+      })
+    }
+  },[]);
 
+  useEffect(()=>{
+    //Page Scroll lock on screens <= 768px (md:)
+    if(isOpen && screenSize <= 768){
+      disablePageScroll();
+    }else{
+      enablePageScroll();
+    }
+  },[isOpen, screenSize]);
 
   return (
-    <div className={`${classNames || ""} mt-2`}>      
-      <div className="flex flex-col items-center justify-center space-y-5 w-full relative top-2 z-50">
+    <div className={`${classNames || ""} mt-2`}>
+      <div className="absolute left-2 top-5 z-40">
+        <HamburgerIcon isOpen={isOpen} setIsOpen={setIsOpen} theme={theme}/>
+      </div>      
+      <div className="flex flex-col items-center justify-center space-y-5 w-full relative top-2 z-30">
         <h1 className="text-textColor text-xl sm:text-2xl flex">
           <span className="font-bold">{developerName.substring(0, 11)}</span>
           <span className="font-extralight"> {developerName.substring(12,20)}</span>
           <span className={`${colorVariants[style].text}`}>{"."}</span>
           <span className="translate-x-3">{themeButton}</span>
         </h1>
-        <div className="fixed left-5 top-10">
-          {HamburgerIcon}
-        </div>
+
       </div>
 
       <div className={`fixed w-full left-0 bottom-0 h-[80px] flex items-center justify-center bg-surface/45 backdrop-blur-sm z-50`}>

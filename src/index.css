@@ -12,6 +12,7 @@
     --primary: 85, 136, 255;
     --red: 199, 52, 36;
     --green: 88, 212, 74;
+    --purple: 211, 73, 242;
   }
 
   /* Dark Mode --> NOTE: [data-theme="dark"] is a class attribute with its value that we can assign to an element if we enclose it in brackets - Here, we are targeting the :root element and providing values when we attach this class attribute  */
@@ -63,6 +64,10 @@
   .greenGradient {
     background: rgb(57,136,48);
     background: linear-gradient(131deg, rgba(57,136,48,1) 1%, rgba(88,212,74,1) 29%, rgba(236,249,234,1) 94%);
+  }
+
+  .purpleGradient {
+    /* Find gradient purple scheme */
   }
 
   .defaultGradient {

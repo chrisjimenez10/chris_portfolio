@@ -24,6 +24,11 @@ const Cards = ({title, style, colorVariants, projects, margins}) => {
       solidBorder = "group-hover:border-green";
       bgGradient = "greenGradient";
       break;
+    case "purple":
+      singleBorder = "border-purple/55";
+      solidBorder = "group-hover:border-purple";
+      bgGradient = "greenGradient";
+      break;
     default:
       singleBorder = "border-contrastBg/55";
       solidBorder = "group-hover:border-contrastBg";

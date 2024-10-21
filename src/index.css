@@ -67,7 +67,8 @@
   }
 
   .purpleGradient {
-    /* Find gradient purple scheme */
+    background: rgb(110,13,126);
+    background: linear-gradient(131deg, rgba(110,13,126,1) 1%, rgba(211,73,242,1) 51%, rgba(255,255,255,1) 100%);
   }
 
   .defaultGradient {

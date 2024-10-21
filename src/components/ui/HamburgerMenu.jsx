@@ -29,6 +29,9 @@ const HamburgerMenu = ({isOpen, style, classNames, navIcons}) => {
     case "green":
       singleBorder = "border-green/55";
       break;
+    case "purple":
+      singleBorder = "border-purple/55";
+      break;
     default:
       singleBorder = "border-contrastBg/55";
   };

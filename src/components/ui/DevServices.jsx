@@ -32,6 +32,10 @@ const DevServices = ({title, style, colorVariants, services}) => {
       bgGradient = "greenGradient";
       singleBorder = "border-green/45";
       break;
+    case "purple":
+      bgGradient = "purpleGradient";
+      singleBorder = "border-purple/45";
+      break;
     default:
       bgGradient = "defaultGradient";
       singleBorder = "border-defaultGradient/45";

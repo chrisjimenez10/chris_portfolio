@@ -24,7 +24,6 @@ export default {
         surface: "rgba(var(--surface))",
         background: "rgba(var(--background))",
         contrastBg: "rgba(var(--contrastBg))",
-        hexBg: "rgba(var(--hexBg))",
       },
       zIndex: {
         king: "90",

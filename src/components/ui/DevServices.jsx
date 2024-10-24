@@ -48,6 +48,8 @@ const DevServices = ({title, style, colorVariants, services, mediumScreenSize}) 
       slides: services,
       style,
       colorVariants,
+      bgGradient,
+      singleBorder,
     };
 
 

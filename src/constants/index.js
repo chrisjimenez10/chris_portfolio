@@ -423,6 +423,17 @@ const services = [
     },
 ];
 
+//Contact
+const contactTitle = "Let's Connect!";
+const contactSubTitle = "I'll bring your vision to life with custom software solutions that drive business objectives forward";
+const contactAddress = "Cicero, IL, 60804";
+const contactPhone = "+1 708 712 6654";
+const contactEmail = "jimenezchristopher5@gmail.com";
+const contactInformation = [
+    contactAddress, contactPhone, contactEmail
+];
+
+
 export {
     navTitles,
     navIcons,
@@ -434,5 +445,8 @@ export {
     credentials,
     projects,
     services,
-    
+    contactInformation,
+    contactTitle,
+    contactSubTitle,
+
 };

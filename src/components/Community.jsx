@@ -10,7 +10,7 @@ const Community = () => {
   const CommunityProps = {
     id: "",
     classNames: "",
-    margins: "mt-[3rem]",
+    margins: "mt-[3rem] md:mt-[7rem]",
     padding: "px-5 py-2",
   };
 

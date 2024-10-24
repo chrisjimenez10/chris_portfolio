@@ -17,7 +17,7 @@ const DevServices = ({title, style, colorVariants, services, mediumScreenSize}) 
       y: "-100%",
     }
   };
-      
+
   let bgGradient = "";
   let singleBorder = "";
   switch(style){
@@ -42,6 +42,14 @@ const DevServices = ({title, style, colorVariants, services, mediumScreenSize}) 
       singleBorder = "border-defaultGradient/45";
   };
 
+    //Props
+    const CarouselProps = {
+      mediumScreenSize,
+      slides: services,
+      style,
+      colorVariants,
+    };
+
 
   return (
     // Flex-Row Services container for 2xl+ screen size - Carousel for screen sizes smaller than 2xl
@@ -52,7 +60,7 @@ const DevServices = ({title, style, colorVariants, services, mediumScreenSize}) 
           <span className="font-bold">{title.substring(2, 11)}</span>
           <span className={`${colorVariants[style].text} font-bold`}>.</span>
         </h1>
-        <Carousel mediumScreenSize={mediumScreenSize}/>
+        <Carousel {...CarouselProps}/>
       </div>
 
       <div className="hidden 2xl:flex flex-col items-center justify-center gap-y-8">

@@ -2,9 +2,12 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCube, Pagination } from "swiper/modules";
 import "swiper/css/bundle";
+import { motion } from "framer-motion";
 //UI
 
 const Carousel = ({slides, mediumScreenSize}) => {
+
+
   return (
     <Swiper
     modules={[EffectCube, Pagination]}
@@ -22,19 +25,11 @@ const Carousel = ({slides, mediumScreenSize}) => {
     }}
     id={mediumScreenSize ? "mediumScreenSize" : ""}
     >
+        
         <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
-        </SwiperSlide>
 
+        </SwiperSlide>
+        
         <div className="swiper-pagination"/>
     </Swiper>
   )

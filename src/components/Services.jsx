@@ -1,5 +1,5 @@
 //Imports
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import { ThemeContext } from "../App";
 import { projects, services } from "../constants";
 import { motion } from "framer-motion";
@@ -15,6 +15,22 @@ const Services = () => {
     //Context
     const {style, colorVariants, theme} = useContext(ThemeContext);
 
+    //State
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+    const [mediumScreenSize, setMediumScreenSize] = useState(null);
+
+    useEffect(()=>{
+      const handleScreenResize = () => {
+        setWindowWidth(window.innerWidth);
+      };
+      window.addEventListener("resize", handleScreenResize);
+      return ()=> window.removeEventListener("resize", handleScreenResize);
+    },[]);
+
+    useEffect(()=>{
+      windowWidth >= 768 ? setMediumScreenSize(true) : setMediumScreenSize(false);
+    },[windowWidth]);
+
     //Props
     const CardsProps = {
       title: "Recent Projects",
@@ -29,6 +45,7 @@ const Services = () => {
       style,
       colorVariants,
       services,
+      mediumScreenSize,
     };
 
     const TriangleParticlesProps = {
@@ -66,7 +83,7 @@ const Services = () => {
       
       <TriangleParticles {...TriangleParticlesProps}/>
       
-      <motion.div className="z-10"
+      <motion.div className="z-10 mt-5"
       id="DevServices"
       variants={DevServicesVariants}
       initial="initial"

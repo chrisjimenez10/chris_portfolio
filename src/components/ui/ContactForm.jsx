@@ -7,9 +7,9 @@ import { MdEmail } from "react-icons/md";
 //Design
 import Section from "../design/Section";
 //UI
+import Alert from "./Alert";
 
-
-const ContactForm = ({style, colorVariants, contactInformation}) => {
+const ContactForm = ({style, colorVariants, contactInformation, theme}) => {
 
     //Data
     const [contactAddress, contactPhone, contactEmail] = contactInformation;
@@ -31,6 +31,8 @@ const ContactForm = ({style, colorVariants, contactInformation}) => {
     const AlertProps = {
       formSent,
       setFormSent,
+      style,
+      theme,
     };
 
     //Phone Input - Client side validation (numbers only)
@@ -63,7 +65,7 @@ const ContactForm = ({style, colorVariants, contactInformation}) => {
 
   return (
     <Section {...ContactFormProps}>
-        {/* <Alert {...AlertProps}/> */}
+        <Alert {...AlertProps}/>
         <div className="relative flex flex-col items-start md:items-center justify-center gap-y-5 px-5 py-5">
           <form className="flex flex-col items-start gap-8 w-full md:w-[500px] [&>div]:w-full [&>div>input]:border [&>div>input]:border-contrastBg/15 [&>div>input]:rounded-md [&>div>label]:text-lg [&>div>input]:px-2 [&>div>input]:text-base" 
           ref={form} onSubmit={sendEmail}>

@@ -10,7 +10,7 @@ import ContactForm from "./ui/ContactForm";
 const Contact = () => {
 
   //Context
-  const {style, colorVariants} = useContext(ThemeContext);
+  const {style, colorVariants, theme} = useContext(ThemeContext);
 
   //Props
   const SectionProps = {
@@ -23,7 +23,7 @@ const Contact = () => {
     style,
     colorVariants,
     contactInformation,
-
+    theme,
   };
 
 

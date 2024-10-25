@@ -62,6 +62,8 @@ const Home = () => {
         </div>              
       </div>
 
+      {/* Extra space bottom of screen for mobile screens */}
+      <div className="h-[200px] sm:hidden"/>
     </div>
 
   )

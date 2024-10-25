@@ -15,8 +15,8 @@ const ChangeStyle = () => {
 
   return (
     <div className="flex flex-col md:ml-5">
-        <h1 className="text-lg">Style</h1>
-        <div className="h-[0.05rem] w-full bg-contrastBg" />
+        <h1 className="text-lg text-textColor">Style</h1>
+        <div className="h-[0.05rem] w-[15rem] bg-contrastBg" />
         <div className="flex gap-5 mt-3">
             <FaDroplet onClick={()=> setStyle("primary")} className={`${colorVariants["primary"].text} cursor-pointer transition-all hover:scale-110`} size={28}/>
             <FaDroplet onClick={()=> setStyle("red")} className={`${colorVariants["red"].text} cursor-pointer transition-all hover:scale-110`} size={28}/>

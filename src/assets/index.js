@@ -38,7 +38,8 @@ import barbellFitnessImg from "./images/barbell_fitness_website.png";
 import brainwaveImg from "./images/brainwave_website.png";
 import pokemonImg from "./images/pokemon_storage_app.png";
 import wincookieImg from "./images/win_cookie_app.png";
-
+//Robot Video
+import robotVideo from "./videos/robot_video.mp4";
 
 
 export {
@@ -73,5 +74,6 @@ export {
     pokemonImg,
     wincookieImg,
     jqueryIcon,
+    robotVideo,
     
 };

@@ -1,10 +1,15 @@
 //Imports
 import { motion } from "framer-motion";
+import { IoIosMail } from "react-icons/io";
+import { useNavigate } from "react-router-dom";
 //Design
 import ChangeStyle from "../design/ChangeStyle";
 
 
 const HamburgerMenu = ({isOpen, style, classNames, navIcons}) => {
+
+  //Navigate
+  const navigate = useNavigate();
 
   //Animation Variants
   const revealVariants = {
@@ -45,8 +50,8 @@ const HamburgerMenu = ({isOpen, style, classNames, navIcons}) => {
     >
 
       <div className="flex flex-col md:ml-5">
-        <h1 className="text-lg">Socials</h1>
-        <div className="h-[0.05rem] w-full bg-contrastBg" />
+        <h1 className="text-lg text-textColor">Socials</h1>
+        <div className="h-[0.05rem] w-[15rem] bg-contrastBg" />
         <div className="flex gap-5 mt-3">
           {navIcons.map(({id, image, title, url})=>(
             <div key={id} className="cursor-pointer transition-transform duration-200 hover:scale-110 bg-white rounded-full p-1 border-[2px] border-background">
@@ -56,6 +61,12 @@ const HamburgerMenu = ({isOpen, style, classNames, navIcons}) => {
             </div>
           ))}
         </div>
+      </div>
+
+      <div className="hidden md:flex flex-col gap-1 md:ml-5">
+          <h1 className="text-lg text-textColor">Contact</h1>
+          <div className="h-[0.05rem] w-[15rem] bg-contrastBg"/>
+          <IoIosMail size={40} className="transition-transform hover:scale-105 cursor-pointer" onClick={()=> navigate("/contact")}/>
       </div>
 
       <ChangeStyle />

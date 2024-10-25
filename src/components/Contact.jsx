@@ -10,7 +10,7 @@ import ContactForm from "./ui/ContactForm";
 const Contact = () => {
 
   //Context
-  const {style, colorVariants} = useContext(ThemeContext);
+  const {style, colorVariants, theme} = useContext(ThemeContext);
 
   //Props
   const SectionProps = {
@@ -22,6 +22,8 @@ const Contact = () => {
   const ContactFormProps = {
     style,
     colorVariants,
+    contactInformation,
+    theme,
   };
 
 
@@ -34,7 +36,7 @@ const Contact = () => {
           <span className={`${colorVariants[style].text} font-bold`}>
             {contactTitle.substring(13, 14)}
           </span>
-          <div className={`absolute bottom-[-5px] h-[.2rem] w-[5rem] ${colorVariants[style].bg}`}/>
+          <div className={`absolute bottom-[-8px] h-[.2rem] w-[5rem] ${colorVariants[style].bg}`}/>
         </h1>
 
         <h2 className="text-2xl text-center text-textColor font-light">
@@ -46,6 +48,8 @@ const Contact = () => {
       </div>
 
       <ContactForm {...ContactFormProps}/>
+
+      <div className="h-[150px] md:hidden"></div>
     </Section>
   )
 }

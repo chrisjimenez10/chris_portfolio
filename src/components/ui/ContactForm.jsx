@@ -1,7 +1,6 @@
 //Imports
 import { useState, useEffect, useRef } from "react";
 import emailjs from "@emailjs/browser";
-import { contactInformation } from "../../constants";
 import { FaMapMarkerAlt } from "react-icons/fa";
 import { MdOutlineLocalPhone } from "react-icons/md";
 import { MdEmail } from "react-icons/md";
@@ -10,7 +9,7 @@ import Section from "../design/Section";
 //UI
 
 
-const ContactForm = ({style, colorVariants}) => {
+const ContactForm = ({style, colorVariants, contactInformation}) => {
 
     //Data
     const [contactAddress, contactPhone, contactEmail] = contactInformation;
@@ -26,7 +25,7 @@ const ContactForm = ({style, colorVariants}) => {
     const ContactFormProps = {
         id: "",
         classNames: "",
-        margins: "",
+        margins: "mt-5",
         paddings: "",
     };
     const AlertProps = {
@@ -65,8 +64,8 @@ const ContactForm = ({style, colorVariants}) => {
   return (
     <Section {...ContactFormProps}>
         {/* <Alert {...AlertProps}/> */}
-        <div className="flex flex-col items-start justify-center gap-y-5 px-5 py-5">
-          <form className="flex flex-col items-start gap-8 w-full [&>div]:w-full [&>div>input]:border [&>div>input]:border-contrastBg/15 [&>div>input]:rounded-md [&>div>label]:text-lg [&>div>input]:px-2 [&>div>input]:text-base" 
+        <div className="relative flex flex-col items-start md:items-center justify-center gap-y-5 px-5 py-5">
+          <form className="flex flex-col items-start gap-8 w-full md:w-[500px] [&>div]:w-full [&>div>input]:border [&>div>input]:border-contrastBg/15 [&>div>input]:rounded-md [&>div>label]:text-lg [&>div>input]:px-2 [&>div>input]:text-base" 
           ref={form} onSubmit={sendEmail}>
 
             <div className="flex flex-col gap-1">
@@ -89,14 +88,14 @@ const ContactForm = ({style, colorVariants}) => {
               <textarea id="message" name="message" required className="border border-contrastBg/15 rounded-md"/>
             </div>
                        
-            <input type="submit" value="Send" className={`text-white font-black w-full cursor-pointer rounded-md ${colorVariants[style].bg} py-1`}/>            
+            <input type="submit" value="Send" className={`text-white font-bold w-full cursor-pointer rounded-md ${colorVariants[style].bg} py-1 border border-contrastBg/35 transition-transform hover:scale-[1.02]`}/>            
 
           </form>
 
-          <div className="h-[0.1rem] bg-contrastBg/15 w-full" />
+          <div className="h-[0.1rem] bg-contrastBg/15 w-full md:w-[500px]" />
 
-          <div className="flex flex-col gap-y-3 [&>div>h2]:text-sm [&>div>h2]:text-textAccent">
-            <h1 className="text-textColor font-black text-base">Contact Information</h1>
+          <div className="flex flex-col gap-y-3 md:items-center md:justify-center [&>div>h2]:text-sm [&>div>h2]:text-textAccent">
+            <h1 className="text-textColor font-bold text-base">Contact Information</h1>
             <div className="flex items-center gap-x-3">
               <FaMapMarkerAlt />
               <h2>{contactAddress}</h2>
@@ -110,7 +109,8 @@ const ContactForm = ({style, colorVariants}) => {
               <h2>{contactEmail}</h2>
             </div>
           </div>
-      </div>
+
+        </div>
     </Section>
   )
 }

@@ -90,7 +90,7 @@ const ContactForm = ({style, colorVariants, contactInformation, theme}) => {
               <textarea id="message" name="message" required className="border border-contrastBg/15 rounded-md"/>
             </div>
                        
-            <input type="submit" value="Send" className={`text-white font-bold w-full cursor-pointer rounded-md ${colorVariants[style].bg} py-1 border border-contrastBg/35 transition-transform hover:scale-[1.02]`}/>            
+            <input type="submit" value="Send" className={`text-white font-bold w-full cursor-pointer rounded-md ${colorVariants[style].bg} py-1 border border-contrastBg/35 transition-transform hover:scale-[1.02]`} />            
 
           </form>
 

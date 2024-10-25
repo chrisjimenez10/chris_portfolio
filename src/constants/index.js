@@ -30,7 +30,6 @@ import {
     awsThreeIcon,
     jqueryIcon,
 
-
 } from "../assets/index.js";
 
 //IMPORTANT: To be able to attach components from libraries/npm packages in a JS file, we MUST import "React" and the components themselves -->NOTE: Then, we use the React.createElement() sytnax like described below

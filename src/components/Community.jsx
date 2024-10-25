@@ -1,5 +1,5 @@
 //Imports
-
+import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 //Design
 import Section from "./design/Section";
 //UI
@@ -10,19 +10,15 @@ const Community = () => {
   const CommunityProps = {
     id: "",
     classNames: "",
-    margins: "mt-[3rem] md:mt-[7rem]",
+    margins: "mt-[10rem] md:mt-[12rem]",
     padding: "px-5 py-2",
   };
 
   return (
     <Section {...CommunityProps}>
-      <div className="flex flex-col gap-y-20 items-center justify-center">
-        <h1 className="text-textColor text-2xl">Community</h1>
-
-        <div className="flex flex-col gap-y-5 items-center justify-center text-xl text-center">
-          <p className="uppercase italic">Under development, coming soon!</p>
-          <p>😎</p>
-        </div>
+      <div className="flex flex-col gap-10 items-center justify-center">
+        <h1 className="text-2xl md:text-4xl text-center uppercase italic">Under development, coming soon!</h1>
+        <DotLottieReact src="src/assets/lotties/developer.lottie" loop autoplay className="w-[300px] md:w-[500px] lg:w-[600px] xl:w-[800px]"/>
       </div>
     </Section>
   )

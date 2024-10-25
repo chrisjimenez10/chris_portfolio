@@ -18,7 +18,7 @@ const Community = () => {
     <Section {...CommunityProps}>
       <div className="flex flex-col gap-10 items-center justify-center">
         <h1 className="text-2xl md:text-4xl text-center uppercase italic">Under development, coming soon!</h1>
-        <DotLottieReact src="src/assets/lotties/developer.lottie" loop autoplay className="w-[300px] md:w-[500px] lg:w-[600px] xl:w-[800px]"/>
+        <DotLottieReact src="src/assets/lotties/developer_lottie.json" loop autoplay className="w-[300px] md:w-[500px] lg:w-[600px] xl:w-[800px]"/>
       </div>
     </Section>
   )

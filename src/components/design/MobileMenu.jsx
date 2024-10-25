@@ -57,7 +57,7 @@ const MobileMenu = ({navTitles, classNames, themeButton, style, colorVariants, i
             <Link key={id} to={url} className="relative group">
 
               {/* Tooltip on Hover */}
-              <div className="absolute -top-[2.8rem] hidden group-hover:flex">
+              <div className="absolute -top-[2.8rem] hidden xs:group-hover:flex">
                 <div className="bg-contrastBg relative flex text-background items-center p-[5px] rounded-[5px]">
                   <div>
                     <h1 className="text-[12px]">

@@ -9,6 +9,8 @@ import Section from "./design/Section";
 import DevServices from "./ui/DevServices";
 import Cards from "./ui/Cards";
 import TriangleParticles from "./ui/TriangleParticles";
+//Components
+import Footer from "./Footer";
 
 const Services = () => {
 
@@ -103,6 +105,7 @@ const Services = () => {
         <Cards {...CardsProps}/>
       </motion.div>
       
+      <Footer />
       <div className="h-[100px] md:hidden"></div>
     </Section>
   )

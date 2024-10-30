@@ -8,6 +8,8 @@ import Section from "./design/Section";
 import CredentialsContainer from "./design/CredentialsContainer";
 import DynamicStats from "./design/DynamicStats";
 import HexagonParticlesContainer from "./design/HexagonParticlesContainer";
+//Components
+import Footer from "./Footer";
 
 const About = () => {
 
@@ -96,6 +98,8 @@ const About = () => {
         className="z-10 ">
           <CredentialsContainer classNames="mt-[2rem] sm:mt-[3rem] xl:w-[650px] xl:h-[400px] z-10" theme={theme} style={style} colorVariants={colorVariants}/>
         </motion.div>
+
+        <Footer className="xl:absolute xl:bottom-5"/>
         {/* Expand BOTTOM for mobile device screen sizes, so that bottom nav bar DOES NOT cover content */}
         <div className="h-[100px] md:hidden"/>
 

@@ -6,6 +6,8 @@ import {ThemeContext} from "../App";
 import Section from "./design/Section";
 //UI
 import ContactForm from "./ui/ContactForm";
+//Components
+import Footer from "./Footer";
 
 const Contact = () => {
 
@@ -49,6 +51,7 @@ const Contact = () => {
 
       <ContactForm {...ContactFormProps}/>
 
+      <Footer className="translate-y-[3rem] md:translate-y-0  xl:translate-y-[3rem]"/>
       <div className="h-[150px] md:hidden"></div>
     </Section>
   )

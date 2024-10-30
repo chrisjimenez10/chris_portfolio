@@ -4,7 +4,6 @@ import { useLocation } from "react-router-dom";
 import { useContext } from "react";
 import { ThemeContext } from "../../App";
 //Components
-import Footer from "../Footer";
 import Navbar from "../Navbar";
 
 
@@ -80,7 +79,6 @@ const PageTransition = ({children}) => {
       <div>
         <Navbar />
         {children}
-        {/* <Footer className="fixed bottom-[90px] w-full md:bottom-3"/> */}
       </div>
       
     </>

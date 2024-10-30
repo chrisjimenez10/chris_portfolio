@@ -10,6 +10,8 @@ import { ThemeContext } from "../App";
 //UI
 import WordEffect from "./design/WordEffect";
 import ParticlesContainer from "./design/ParticlesContainer";
+//Components
+import Footer from "./Footer";
 
 
 const Home = () => {
@@ -62,6 +64,7 @@ const Home = () => {
         </div>              
       </div>
 
+      <Footer className="translate-y-[5rem] sm:translate-y-0 md:absolute md:bottom-5"/>
       {/* Extra space bottom of screen for mobile screens */}
       <div className="h-[200px] sm:hidden"/>
     </div>

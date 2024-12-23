@@ -30,6 +30,7 @@ import reactIcon from "./svgs/react.svg";
 import tailwindIcon from "./svgs/tailwind.svg";
 import wordpressIcon from "./svgs/wordpress.svg";
 import jqueryIcon from "./svgs/jquery.svg";
+import typescriptIcon from "./svgs/typescript.svg";
 //Tech Icons (UI/UX Design)
 import figmaIcon from "./svgs/figma.svg";
 import canvaIcon from "./svgs/canva.svg";
@@ -69,11 +70,12 @@ export {
     wordpressIcon,
     figmaIcon,
     canvaIcon,
+    typescriptIcon,
     barbellFitnessImg,
     brainwaveImg,
     pokemonImg,
     wincookieImg,
     jqueryIcon,
     robotVideo,
-    
+
 };

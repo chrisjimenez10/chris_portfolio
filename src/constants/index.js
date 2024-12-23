@@ -21,6 +21,7 @@ import {
     wordpressIcon,
     figmaIcon,
     canvaIcon,
+    typescriptIcon,
     barbellFitnessImg,
     brainwaveImg,
     pokemonImg,
@@ -192,21 +193,26 @@ const webDevelopment = [
     },
     {
         id: 4,
+        title: "TypeScript",
+        image: typescriptIcon,
+    },
+    {
+        id: 5,
         title: "ReactJS",
         image: reactIcon,
     },
     {
-        id: 5,
+        id: 6,
         title: "TailwindCSS",
         image: tailwindIcon,
     },
     {
-        id: 6,
+        id: 7,
         title: "FramerMotion",
         image: framermotionIcon,
     },
     {
-        id: 7,
+        id: 8,
         title: "WordPress",
         image: wordpressIcon,
     },

@@ -235,7 +235,7 @@ const experience = [
     {
         id: 1,
         title: "Software Engineer - Freelance",
-        date: "2024",
+        date: `2024 - ${new Date().getFullYear()}`,
     },
     {
         id: 2,

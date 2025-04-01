@@ -9,7 +9,7 @@ const DynamicStats = ({classNames, style, colorVariants}) => {
       <div className="flex flex-col">
         <CountUp
         start={-29}
-        end={2}
+        end={3}
         duration={6}
         delay={1}
         suffix=" +" //Static text AFTER the Number
